@@ -8,8 +8,9 @@ import productRoutes from './routes/productRoutes';
 import userRoutes from './routes/userRoutes';
 import clientRoutes from './routes/clientRoutes';
 import suplierRoutes from './routes/suplierRoutes';
-import orderRoutes from './routes/orderRoutes'
-import deliveryRoutes from './routes/deliveryRoutes'
+import orderRoutes from './routes/orderRoutes';
+import deliveryRoutes from './routes/deliveryRoutes';
+import orderDetailsRoutes from './routes/orderDetailsRoutes';
 
 class Server{
 
@@ -37,6 +38,7 @@ class Server{
         this.app.use('/api/clients',clientRoutes);
         this.app.use('/api/supliers',suplierRoutes);
         this.app.use('/api/orders',orderRoutes);
+        this.app.use('/api/order_details',orderDetailsRoutes);
         this.app.use('/api/delivery',deliveryRoutes);
     }
 

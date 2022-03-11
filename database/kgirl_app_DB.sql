@@ -10,21 +10,16 @@ email VARCHAR(400) NOT NULL,
 password VARCHAR(400) NOT NULL,
 rol_id INT NOT NULL,
 status VARCHAR(150) NOT NULL,
+client_id INT,
 created_at timestamp NOT NULL DEFAULT current_timestamp,
 updated_at DATE,
 PRIMARY KEY(user_id));
 
 CREATE TABLE clients(
 client_id INT NOT NULL AUTO_INCREMENT,
-name VARCHAR(150) NOT NULL,
-last_name VARCHAR(150) NOT NULL,
 address VARCHAR(150) NOT NULL,
 phone_number VARCHAR(100),
 birth_date DATE,
-status VARCHAR(150),
-user_id INT,
-created_at timestamp NOT NULL DEFAULT current_timestamp,
-updated_at DATE,
 PRIMARY KEY(client_id));
 
 CREATE TABLE products(
@@ -102,9 +97,9 @@ ALTER TABLE users
 ADD CONSTRAINT FK_rol_id
 FOREIGN KEY (rol_id) REFERENCES rol(rol_id);
 
-ALTER TABLE clients
-ADD CONSTRAINT FK_user_id
-FOREIGN KEY (user_id) REFERENCES users(user_id);
+ALTER TABLE users
+ADD CONSTRAINT FK_client_id_user
+FOREIGN KEY (client_id) REFERENCES clients(client_id);
 
 ALTER TABLE products
 ADD CONSTRAINT FK_suplier_id
