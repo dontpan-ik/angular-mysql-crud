@@ -8,10 +8,10 @@ name VARCHAR(150) NOT NULL,
 last_name VARCHAR(150) NOT NULL,
 email VARCHAR(400) NOT NULL,
 password VARCHAR(400) NOT NULL,
-rol_id INT NOT NULL,
-created_at timestamp NOT NULL DEFAULT current_timestamp,
-updated_at DATE NOT NULL,
+rol_id INT,
 status VARCHAR(150) NOT NULL,
+created_at timestamp NOT NULL DEFAULT current_timestamp,
+updated_at DATE,
 PRIMARY KEY(user_id));
 
 CREATE TABLE clients(
