@@ -13,45 +13,44 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const database_1 = __importDefault(require("../database"));
-class ProductController {
-    get_product_list(req, res) {
+class ClientController {
+    get_client_list(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const products = yield database_1.default.query('SELECT * FROM products');
-            res.json(products);
+            const clients = yield database_1.default.query('SELECT * FROM clients');
+            res.json(clients);
         });
     }
-    get_product(req, res) {
+    get_client(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { product_id } = req.params;
-            const product = yield database_1.default.query('SELECT * FROM products WHERE product_id = ?', [product_id]);
-            if (product.length > 0) {
-                return res.json(product[0]);
+            const { client_id } = req.params;
+            const client = yield database_1.default.query('SELECT * FROM users WHERE user_id = ?', [client_id]);
+            if (client.length > 0) {
+                return res.json(client[0]);
             }
             ;
-            res.status(404).json({ message: "The product doesn't exist" });
+            res.status(404).json({ message: "The client doesn't exist" });
         });
     }
-    create_product(req, res) {
+    create_client(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log(req.body);
-            yield database_1.default.query('INSERT INTO products SET ?', [req.body]);
-            res.json({ message: 'Product created' });
+            yield database_1.default.query('INSERT INTO clients SET ?', [req.body]);
+            res.json({ message: 'Client was created' });
         });
     }
-    delete_product(req, res) {
+    delete_client(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { product_id } = req.params;
-            yield database_1.default.query('DELETE FROM products WHERE product_id = ?', [product_id]);
-            res.json({ message: 'The Product was deleted' });
+            const { client_id } = req.params;
+            yield database_1.default.query('DELETE FROM clients WHERE client_id = ?', [client_id]);
+            res.json({ message: 'The client was deleted' });
         });
     }
-    update_product(req, res) {
+    update_client(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { product_id } = req.params;
-            yield database_1.default.query('UPDATE products set ? WHERE product_id = ?', [req.body, product_id]);
-            res.json({ message: 'The Product was updated' });
+            const { client_id } = req.params;
+            yield database_1.default.query('UPDATE clients set ? WHERE client_id = ?', [req.body, client_id]);
+            res.json({ message: 'The client was updated' });
         });
     }
 }
-const productController = new ProductController();
-exports.default = productController;
+const clientController = new ClientController();
+exports.default = clientController;

@@ -20,11 +20,11 @@ name VARCHAR(150) NOT NULL,
 last_name VARCHAR(150) NOT NULL,
 address VARCHAR(150) NOT NULL,
 phone_number VARCHAR(100),
-birth_date DATE NOT NULL,
+birth_date DATE,
+status VARCHAR(150),
+user_id INT,
 created_at timestamp NOT NULL DEFAULT current_timestamp,
-updated_at DATE NOT NULL,
-status VARCHAR(150) NOT NULL,
-user_id INT NOT NULL,
+updated_at DATE,
 PRIMARY KEY(client_id));
 
 CREATE TABLE products(
@@ -51,9 +51,9 @@ email VARCHAR(400) NOT NULL,
 address VARCHAR(150) NOT NULL,
 contact_number VARCHAR(100),
 score FLOAT,
-created_at timestamp NOT NULL DEFAULT current_timestamp,
-updated_at DATE NOT NULL,
 status VARCHAR(150) NOT NULL,
+created_at timestamp NOT NULL DEFAULT current_timestamp,
+updated_at DATE,
 PRIMARY KEY(suplier_id));
 
 CREATE TABLE delivery(
@@ -63,20 +63,20 @@ email VARCHAR(400) NOT NULL,
 address VARCHAR(150) NOT NULL,
 contact_number VARCHAR(100),
 charge FLOAT NOT NULL,
-created_at timestamp NOT NULL DEFAULT current_timestamp,
-updated_at DATE NOT NULL,
 status VARCHAR(150) NOT NULL,
+created_at timestamp NOT NULL DEFAULT current_timestamp,
+updated_at DATE,
 PRIMARY KEY(delivery_id));
 
 CREATE TABLE orders(
 order_id INT NOT NULL AUTO_INCREMENT,
 client_id INT NOT NULL,
 total_items INT NOT NULL,
-total_charge FLOAT NOT NULL,
-delivery_id INT NOT NULL,
-created_at timestamp NOT NULL DEFAULT current_timestamp,
-updated_at DATE NOT NULL,
+total_charge FLOAT,
+delivery_id INT,
 status VARCHAR(150) NOT NULL,
+created_at timestamp NOT NULL DEFAULT current_timestamp,
+updated_at DATE,
 PRIMARY KEY(order_id));
 
 CREATE TABLE order_details(
@@ -85,7 +85,7 @@ product_id INT NOT NULL,
 amount INT NOT NULL,
 charge FLOAT NOT NULL,
 created_at timestamp NOT NULL DEFAULT current_timestamp,
-updated_at DATE NOT NULL);
+updated_at DATE);
 
 CREATE TABLE category(
 category_id INT NOT NULL AUTO_INCREMENT,
@@ -128,16 +128,3 @@ FOREIGN KEY (order_id) REFERENCES orders(order_id);
 ALTER TABLE order_details
 ADD CONSTRAINT FK_product_id
 FOREIGN KEY (product_id) REFERENCES products(product_id);
-
-
-INSERT INTO products(name,brand,category_id,description,public_price,suplier_price,stock,status,image_url) VALUES(
-'Termo / Yakult',
-'Yakult',
-1,
-'Termo para llevar cafe a la escuela',
-84.99,
-62.12,
-15,
-'ACTIVE',
-'NOT SET'
-);

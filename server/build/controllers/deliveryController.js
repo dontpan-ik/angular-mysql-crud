@@ -13,45 +13,45 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const database_1 = __importDefault(require("../database"));
-class ProductController {
-    get_product_list(req, res) {
+class DeliveryController {
+    get_delivery_list(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const products = yield database_1.default.query('SELECT * FROM products');
-            res.json(products);
+            const delivery = yield database_1.default.query('SELECT * FROM delivery');
+            res.json(delivery);
         });
     }
-    get_product(req, res) {
+    get_delivery(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { product_id } = req.params;
-            const product = yield database_1.default.query('SELECT * FROM products WHERE product_id = ?', [product_id]);
-            if (product.length > 0) {
-                return res.json(product[0]);
+            const { delivery_id } = req.params;
+            const delivery = yield database_1.default.query('SELECT * FROM delivery WHERE delivery_id = ?', [delivery_id]);
+            if (delivery.length > 0) {
+                return res.json(delivery[0]);
             }
             ;
-            res.status(404).json({ message: "The product doesn't exist" });
+            res.status(404).json({ message: "The delivery doesn't exist" });
         });
     }
-    create_product(req, res) {
+    create_delivery(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             console.log(req.body);
-            yield database_1.default.query('INSERT INTO products SET ?', [req.body]);
-            res.json({ message: 'Product created' });
+            yield database_1.default.query('INSERT INTO delivery SET ?', [req.body]);
+            res.json({ message: 'Delivery created' });
         });
     }
-    delete_product(req, res) {
+    delete_delivery(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { product_id } = req.params;
-            yield database_1.default.query('DELETE FROM products WHERE product_id = ?', [product_id]);
-            res.json({ message: 'The Product was deleted' });
+            const { delivery_id } = req.params;
+            yield database_1.default.query('DELETE FROM delivery WHERE delivery_id = ?', [delivery_id]);
+            res.json({ message: 'The Delivery was deleted' });
         });
     }
-    update_product(req, res) {
+    update_delivery(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { product_id } = req.params;
-            yield database_1.default.query('UPDATE products set ? WHERE product_id = ?', [req.body, product_id]);
-            res.json({ message: 'The Product was updated' });
+            const { delivery_id } = req.params;
+            yield database_1.default.query('UPDATE delivery set ? WHERE delivery_id = ?', [req.body, delivery_id]);
+            res.json({ message: 'The Delivery was updated' });
         });
     }
 }
-const productController = new ProductController();
-exports.default = productController;
+const deliveryController = new DeliveryController();
+exports.default = deliveryController;

@@ -6,6 +6,10 @@ import indexRoutes from './routes/indexRoutes';
 import gamesRoutes from './routes/gamesRoutes';
 import productRoutes from './routes/productRoutes';
 import userRoutes from './routes/userRoutes';
+import clientRoutes from './routes/clientRoutes';
+import suplierRoutes from './routes/suplierRoutes';
+import orderRoutes from './routes/orderRoutes'
+import deliveryRoutes from './routes/deliveryRoutes'
 
 class Server{
 
@@ -30,6 +34,10 @@ class Server{
         this.app.use('/api/games',gamesRoutes);
         this.app.use('/api/products',productRoutes);
         this.app.use('/api/users',userRoutes);
+        this.app.use('/api/clients',clientRoutes);
+        this.app.use('/api/supliers',suplierRoutes);
+        this.app.use('/api/orders',orderRoutes);
+        this.app.use('/api/delivery',deliveryRoutes);
     }
 
     start():void{

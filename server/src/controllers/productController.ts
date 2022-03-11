@@ -3,7 +3,7 @@ import {Request, Response} from 'express';
 import pool from '../database';
 
 class ProductController{
-    public async product_list (req: Request, res: Response){
+    public async get_product_list (req: Request, res: Response){
         const products = await pool.query('SELECT * FROM products');
         res.json(products);
     }

@@ -11,7 +11,7 @@ class ProductRoutes {
         this.config();
     }
     config() {
-        this.router.get('/', productController_1.default.product_list);
+        this.router.get('/', productController_1.default.get_product_list);
         this.router.get('/:product_id', productController_1.default.get_product);
         this.router.post('/', productController_1.default.create_product);
         this.router.put('/:product_id', productController_1.default.update_product);
