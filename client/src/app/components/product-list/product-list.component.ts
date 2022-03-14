@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { ProductsService } from '../../services/products.service'
 
 @Component({
@@ -7,6 +7,8 @@ import { ProductsService } from '../../services/products.service'
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
+
+  @HostBinding( 'class') classes = 'row';
 
   products: any =[];
   constructor(private productsService: ProductsService) { }
