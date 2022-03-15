@@ -12,6 +12,14 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 
 
 import { ProductsService } from './services/products.service';
+import { HomeComponent } from './components/home/home.component';
+import { VentasComponent } from './components/ventas/ventas.component';
+import { MenuComponent } from './components/common/menu/menu.component';
+import { ComprasComponent } from './components/compras/compras.component';
+import { ClientesComponent } from './components/clientes/clientes.component';
+import { EstadisticasComponent } from './components/estadisticas/estadisticas.component';
+import { UsuariosComponent } from './components/usuarios/usuarios.component';
+import { ProveedoresComponent } from './components/proveedores/proveedores.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +27,15 @@ import { ProductsService } from './services/products.service';
     NavigationComponent,
     ProductFormComponent,
     ProductListComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HomeComponent,
+    VentasComponent,
+    MenuComponent,
+    ComprasComponent,
+    ClientesComponent,
+    EstadisticasComponent,
+    UsuariosComponent,
+    ProveedoresComponent
   ],
   imports: [
     BrowserModule,
