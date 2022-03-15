@@ -1,0 +1,31 @@
+.container1{
+    width: 83%;
+    height: 98vh;
+    background-color: #FFCBE7;
+    float: right;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+.card{
+    background-color: rgb(255, 255, 255);
+    width:81%;
+    border-radius: 15px;
+    margin-left: 15px!important;
+    margin-top: 20px;
+    padding: 10 2 0 0%;
+    position: absolute;
+}
+h3{
+    position: absolute;
+    width: 202px;
+    height: 45px;
+    left: 120px;
+    top: 35%;
+    font-size: 32px;
+    color: #876BAD;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+svg{
+    padding: 1%;
+    margin-left: 20px!important;
+}
