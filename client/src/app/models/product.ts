@@ -1,4 +1,5 @@
 export interface Product{
+    product_id?: number;
     name?: string;
     brand?: string;
     category_id?: number;

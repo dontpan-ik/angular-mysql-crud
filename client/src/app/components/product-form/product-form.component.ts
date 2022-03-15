@@ -1,6 +1,7 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { Product } from '../../models/Product';
 import { ProductsService} from '../../services/products.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-form',
@@ -23,9 +24,10 @@ export class ProductFormComponent implements OnInit {
     image_url: 'NOT JET'
   }
 
-  constructor(private productService: ProductsService ) { }
+  constructor(private productService: ProductsService, private router: Router, private activedRoute: ActivatedRoute ) { }
 
   ngOnInit(): void {
+    const params = this.activedRoute.snapshot.params;
   }
 
   saveNewProduct(): void {
@@ -34,6 +36,7 @@ export class ProductFormComponent implements OnInit {
       .subscribe(
         res=>{
           console.log(res);
+          this.router.navigate(['/products']);
         },
         err =>{
           console.log(err);
