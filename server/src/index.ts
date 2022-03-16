@@ -11,6 +11,7 @@ import suplierRoutes from './routes/suplierRoutes';
 import orderRoutes from './routes/orderRoutes';
 import deliveryRoutes from './routes/deliveryRoutes';
 import orderDetailsRoutes from './routes/orderDetailsRoutes';
+import loginRoutes from './routes/loginRoutes';
 
 class Server{
 
@@ -32,6 +33,7 @@ class Server{
 
     routes():void{
         this.app.use('/',indexRoutes);
+        this.app.use('/api/login', loginRoutes);
         this.app.use('/api/games',gamesRoutes);
         this.app.use('/api/products',productRoutes);
         this.app.use('/api/users',userRoutes);

@@ -15,6 +15,7 @@ const suplierRoutes_1 = __importDefault(require("./routes/suplierRoutes"));
 const orderRoutes_1 = __importDefault(require("./routes/orderRoutes"));
 const deliveryRoutes_1 = __importDefault(require("./routes/deliveryRoutes"));
 const orderDetailsRoutes_1 = __importDefault(require("./routes/orderDetailsRoutes"));
+const loginRoutes_1 = __importDefault(require("./routes/loginRoutes"));
 class Server {
     constructor() {
         this.app = (0, express_1.default)();
@@ -30,6 +31,7 @@ class Server {
     }
     routes() {
         this.app.use('/', indexRoutes_1.default);
+        this.app.use('/api/login', loginRoutes_1.default);
         this.app.use('/api/games', gamesRoutes_1.default);
         this.app.use('/api/products', productRoutes_1.default);
         this.app.use('/api/users', userRoutes_1.default);
