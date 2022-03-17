@@ -21,6 +21,7 @@ import { EstadisticasComponent } from './components/estadisticas/estadisticas.co
 import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { ProveedoresComponent } from './components/proveedores/proveedores.component';
 import { HeaderComponent } from './components/common/header/header.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { HeaderComponent } from './components/common/header/header.component';
     EstadisticasComponent,
     UsuariosComponent,
     ProveedoresComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

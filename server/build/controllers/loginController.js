@@ -8,24 +8,22 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const database_1 = __importDefault(require("../database"));
+require('dotenv').config();
+const jwt = require("jsonwebtoken");
+const token = require('crypto').randomBytes(64).toString('hex');
 class LoginController {
     login(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log(req.body.email);
-            console.log(req.body.password);
-            const email = req.body.email;
+            const user = req.body.email;
             const pass = req.body.password;
-            const product = yield database_1.default.query('SELECT * FROM users WHERE email = ? AND password = ? ', [email, pass]);
-            if (product.length > 0) {
+            /*const product = await pool.query('SELECT * FROM users WHERE email = ? AND password = ? ',[email, pass]);
+            if(product.length > 0){
                 return res.json(product[0].rol_id);
-            }
-            ;
-            res.status(404).json({ message: "The User doesn't exist" });
+            };
+            res.status(404).json({message:"The User doesn't exist"});*/
+            const accessToken = jwt.sign({ name: user }, process.env.ACCESS_TOKEN_SECRET);
+            res.json({ message: accessToken });
         });
     }
 }
