@@ -10,9 +10,9 @@
             <p>Bienvenido</p>
         </div>
         <form class="login__container--form">
-            <input class="input" type="text" placeholder="e-mail">
-            <input class="input" type="password" placeholder="password">
-            <button class="button">Iniciar Sesion</button>
+            <input class="input" type="email" [(ngModel)]="login.email" name="email" placeholder="e-mail">
+            <input class="input" type="password" [(ngModel)]="login.password" name="password" placeholder="password">
+            <button class="button" (click)="login_into()">Iniciar Sesion</button>
             <div class="login__container--remember-me">
                 <label >
                     <input type="checkbox" name="" id="box1" value="checkbox">Recuerdame
