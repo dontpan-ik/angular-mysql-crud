@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +12,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 
 
 import { ProductsService } from './services/products.service';
+import { LoginService } from './services/login.service';
+
 import { HomeComponent } from './components/home/home.component';
 import { VentasComponent } from './components/ventas/ventas.component';
 import { MenuComponent } from './components/common/menu/menu.component';
@@ -45,10 +47,12 @@ import { LoginComponent } from './components/login/login.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
-    ProductsService
+    ProductsService,
+    LoginService
   ],
   bootstrap: [AppComponent]
 })

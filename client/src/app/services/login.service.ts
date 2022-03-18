@@ -14,6 +14,10 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   login(seseion: Login){
-    return this.http.post(`${this.API_URI}/login`,seseion)
+    return this.http.post(`${this.API_URI}/login`,seseion);
+  }
+
+  getProducts(){
+    return this.http.get(`${this.API_URI}/products`);
   }
 }

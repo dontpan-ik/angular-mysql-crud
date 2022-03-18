@@ -7,17 +7,16 @@ const token = require('crypto').randomBytes(64).toString('hex');
 import pool from '../database';
 
 class LoginController{
-    public async login (req: Request, res: Response){
+    public async login (req: Request, res: Response):Promise<any>{
          
         const user = req.body.email;
         const pass = req.body.password;
-        /*const product = await pool.query('SELECT * FROM users WHERE email = ? AND password = ? ',[email, pass]);
+        const product = await pool.query('SELECT * FROM users WHERE email = ? AND password = ? ',[user, pass]);
         if(product.length > 0){
-            return res.json(product[0].rol_id);
+            const accessToken = jwt.sign({name: user},process.env.ACCESS_TOKEN_SECRET);
+             return res.json({message:accessToken})
         };
-        res.status(404).json({message:"The User doesn't exist"});*/
-        const accessToken = jwt.sign({name: user},process.env.ACCESS_TOKEN_SECRET);
-        res.json({message:accessToken})
+        res.status(404).json({message:"Incorrect User or Password"});
     }
 }
 

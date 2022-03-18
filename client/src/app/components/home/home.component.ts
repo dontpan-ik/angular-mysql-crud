@@ -10,26 +10,18 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  login: Login = {
-    email: '',
-    password: ''
-  }
+  login: Login={
+    email: "",
+    password: ""
+  };
   constructor(private loginService: LoginService, private router: Router, private activedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     const params = this.activedRoute.snapshot.params;
   }
 
-  login_into():void{
+  login_into(){
     console.log(this.login);
     this.loginService.login(this.login)
-      .subscribe(
-        res=>{
-          console.log(res);
-        },
-        err=>{
-          console.log(err)
-        }
-      )
   }
 }

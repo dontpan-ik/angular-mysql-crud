@@ -12,9 +12,10 @@ import { EstadisticasComponent } from './components/estadisticas/estadisticas.co
 import { ProveedoresComponent } from './components/proveedores/proveedores.component';
 import { VentasComponent } from './components/ventas/ventas.component';
 import { ClientesComponent } from './components/clientes/clientes.component';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full'  },
+  { path: '', redirectTo: 'login', pathMatch: 'full'  },
   { path: 'home',component: HomeComponent},
   { path: 'products', component: ProductListComponent },
   { path: 'products/add', component: ProductFormComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'proveedores', component: ProveedoresComponent },
   { path: 'ventas', component: VentasComponent },
   { path: 'clientes', component: ClientesComponent },
+  { path: 'login', component: LoginComponent},
   { path: '**', component: PageNotFoundComponent }
 ];
 
