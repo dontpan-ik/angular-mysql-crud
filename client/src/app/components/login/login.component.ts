@@ -29,11 +29,13 @@ export class LoginComponent implements OnInit {
       .subscribe(
         res => {
           const data = res;
+          var rol = this.getRol(data.rol_id);
           localStorage.setItem("access_token",data.access_token);
           localStorage.setItem('user_id', data.user_id);
           localStorage.setItem('name', data.name);
+          localStorage.setItem('last_name', data.last_name);
           localStorage.setItem('email', data.email);
-          localStorage.setItem('rol_id',data.rol_id);
+          localStorage.setItem('rol',rol);
           this.router.navigate(['/home']);
           
           
@@ -44,6 +46,19 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['/login']);
         }
     )
+  }
+
+  getRol(id:number){
+    switch(id){
+      case 1:
+        return 'ADMINISTRADOR';
+      case 2:
+        return 'EDITOR';
+      case 3:
+        return 'CONSULTOR';
+      default:
+        return '';
+    }
   }
 
   

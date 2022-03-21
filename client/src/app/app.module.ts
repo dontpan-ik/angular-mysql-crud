@@ -13,6 +13,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 
 import { ProductsService } from './services/products.service';
 import { LoginService } from './services/login.service';
+import { UsersService } from './services/users.service';
 
 import { HomeComponent } from './components/home/home.component';
 import { VentasComponent } from './components/ventas/ventas.component';
@@ -66,6 +67,7 @@ import { RegistroComponent } from './components/registro/registro.component';
   providers: [
     ProductsService,
     LoginService,
+    UsersService,
     LoginGuardGuard,
     HomeGuard,
     ProductsGuard,

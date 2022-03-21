@@ -1,0 +1,28 @@
+.card{
+    float: right;
+    width: 109%;
+    margin-right: -4%;
+    margin-top: 1%;
+    padding: 2%;
+    border-color: white;
+ }
+ 
+ .btn{
+     
+    margin-top: -4%;
+    margin-left: -3%;
+    background-color: #876BAD;
+    border-color: #876BAD;
+ 
+ 
+ }
+ 
+ .card2{
+    background-color: #fff;
+    float: right;
+    width: 102%;
+    margin-right: -12%;
+    margin-top: 2%;
+    padding: 5%;
+    border-radius: 15px;
+  }

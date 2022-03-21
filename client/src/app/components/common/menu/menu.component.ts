@@ -18,8 +18,9 @@ export class MenuComponent implements OnInit {
     localStorage.removeItem('access_token');
     localStorage.removeItem('user_id');
     localStorage.removeItem('name');
+    localStorage.removeItem('last_name');
     localStorage.removeItem('email');
-    localStorage.removeItem('rol_id');
+    localStorage.removeItem('rol');
     this.ngOnInit();
     this.router.navigate(['/home']);
     

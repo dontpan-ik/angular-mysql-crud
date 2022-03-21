@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   user: User={
     user_id: 0,
-    rol_id: 0,
+    rol: "",
     email: "",
     name:  "",
     token: ""
@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
 
   loadUserInfo(){
     this.user.user_id = Number(localStorage.getItem('user_id')  || 0)
-    this.user.rol_id = Number(localStorage.getItem('rol_id')  || 0)
+    this.user.rol = localStorage.getItem('rol_id')  || '';
     this.user.name = localStorage.getItem('name')  || '';
     this.user.email = localStorage.getItem('email')  || '';
     this.user.token = localStorage.getItem('token')  || '';

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { LoginService } from './services/login.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +10,7 @@ export class AppComponent {
 
   token : String;
   tipo = "";
-  constructor(private loginService : LoginService) {
+  constructor() {
     this.token="";
   }
 
@@ -24,7 +23,6 @@ export class AppComponent {
     if(localStorage.getItem(key)){
       //return localStorage.getItem(key);
       return "logeado"
-      this.ngOnInit()
 
     }else{
       return "";
