@@ -1,10 +1,10 @@
 html, body {
-    margin: 0px;
+    margin: -6px;
     height:100%;
 } 
 
 body{
-    background-image: url('./assets/images/fondo.jpg');
+    background-color: #FFCBE7;
     background-size: auto 100%;
     background-position: left top;
     

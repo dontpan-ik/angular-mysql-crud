@@ -1,4 +1,18 @@
+html, body {
+    margin: 0px;
+    height:100%;
+} 
+
+body{
+    background-image: url(../../../assets/images/fondo.jpg);
+    background-size: auto 100%;
+    background-position: left top;
+    
+    font-family: 'Mulish', sans-serif;
+}
 .login{
+    background-image: url(../../../assets/images/fondo.jpg);
+    background-size: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
