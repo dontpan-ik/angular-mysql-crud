@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Login } from 'src/app/models/login';
 import { LoginService } from 'src/app/services/login.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-home',
@@ -10,18 +10,24 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  login: Login={
+  user: User={
+    user_id: 0,
+    rol_id: 0,
     email: "",
-    password: ""
+    name:  "",
+    token: ""
   };
   constructor(private loginService: LoginService, private router: Router, private activedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    const params = this.activedRoute.snapshot.params;
+    this.loadUserInfo();
   }
 
-  login_into(){
-    console.log(this.login);
-    this.loginService.login(this.login)
+  loadUserInfo(){
+    this.user.user_id = Number(localStorage.getItem('user_id')  || 0)
+    this.user.rol_id = Number(localStorage.getItem('rol_id')  || 0)
+    this.user.name = localStorage.getItem('name')  || '';
+    this.user.email = localStorage.getItem('email')  || '';
+    this.user.token = localStorage.getItem('token')  || '';
   }
 }
