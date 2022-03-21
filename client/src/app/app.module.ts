@@ -24,6 +24,17 @@ import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { ProveedoresComponent } from './components/proveedores/proveedores.component';
 import { HeaderComponent } from './components/common/header/header.component';
 import { LoginComponent } from './components/login/login.component';
+import { LoginGuardGuard } from './guards/login-guard.guard';
+import { HomeGuard } from './guards/home.guard';
+import { ProductsGuard } from './guards/products.guard';
+import { ComprasGuard } from './guards/compras.guard';
+import { VentasGuard } from './guards/ventas.guard';
+import { ClientesGuard } from './guards/clientes.guard'
+import { UsuariosGuard } from './guards/usuarios.guard'
+import { EstadisticasGuard } from './guards/estadisticas.guard'
+import { ProveedoresGuard } from './guards/proveedores.guard'
+
+
 
 @NgModule({
   declarations: [
@@ -52,7 +63,16 @@ import { LoginComponent } from './components/login/login.component';
   ],
   providers: [
     ProductsService,
-    LoginService
+    LoginService,
+    LoginGuardGuard,
+    HomeGuard,
+    ProductsGuard,
+    ComprasGuard,
+    VentasGuard,
+    ClientesGuard,
+    UsuariosGuard,
+    EstadisticasGuard,
+    ProveedoresGuard
   ],
   bootstrap: [AppComponent]
 })
