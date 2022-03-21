@@ -24,6 +24,7 @@ import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { ProveedoresComponent } from './components/proveedores/proveedores.component';
 import { HeaderComponent } from './components/common/header/header.component';
 import { LoginComponent } from './components/login/login.component';
+import { RegistroComponent } from './components/registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { LoginComponent } from './components/login/login.component';
     UsuariosComponent,
     ProveedoresComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
