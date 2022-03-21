@@ -1,14 +1,46 @@
-.header-com{
-    margin-top: 50px;
-    margin-left: 112px;
-    width: 104%;
-    background-color: white;
-    border-radius: 10px;
+
+.header-com {
+  margin-top: 50px;
+  margin-left: 112px;
+  width: 104%;
+  background-color: white;
+  border-radius: 10px;
+}
+h3 {
+  font-size: 32px;
+  color: #876bad;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.login {
+    justify-content: right;
+}
+.bi {
+    position: relative;
+    display: table-cell;
+    width: 25px;
+    height: 35px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 20px;
+  }
+
+  p{
+    margin-top: -20px;
+    margin-bottom: 1rem;
+    margin-left: 86%;
+    font-size: 20px;
 
 }
-h3{
-   
-    font-size: 32px;
-    color: #876BAD;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+
+.bi-person-circle{
+    margin-left: 82%;
+    width: 3%;
+    height: 10%;
+    color: #876bad;
 }
+  
+  
+ 
