@@ -135,7 +135,7 @@ nav.main-menu li.active > a,
 .no-touch .dashboard-page nav.dashboard-menu ul li:hover a,
 .dashboard-page nav.dashboard-menu ul li.active a {
   color: #fff;
-  background-color: #5fa2db;
+  background-color: #d1c0df
 }
 .area {
   float: left;
@@ -154,7 +154,7 @@ nav.main-menu li.active > a,
 
 .card1 {
  
-  height: 60px;
+  height: 90px;
   width: 250px;
   text-align: center;
   background-color: #fff;
