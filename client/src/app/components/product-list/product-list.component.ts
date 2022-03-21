@@ -10,6 +10,8 @@ export class ProductListComponent implements OnInit {
 
   @HostBinding( 'class') classes = 'row';
 
+  title = "Productos";
+
   products: any =[];
   constructor(private productsService: ProductsService) { }
 
