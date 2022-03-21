@@ -12,6 +12,7 @@ export class UsuariosComponent implements OnInit {
   title = "Usuarios";
 
   user: Users={
+    user_id: 0,
     name: "",
     last_name: "",
     email: "",
@@ -35,7 +36,7 @@ export class UsuariosComponent implements OnInit {
     )
   }
 
-  deleteProduct(id: string){
+  deleteUser(id: number){
     this.usersService.deleteUser(id).subscribe(
       res =>{
         this.getUsers();
@@ -44,8 +45,16 @@ export class UsuariosComponent implements OnInit {
     )
   }
 
-  editProduct(id: string){
-    console.log(id);
+  searchUser(){
+    console.log('searching...');
+  }
+
+  addUser(){
+    console.log('adding...');
+  }
+
+  editProduct(id: number){
+    console.log('Your id '+id);
   }
 
 }

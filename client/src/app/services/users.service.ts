@@ -16,7 +16,7 @@ export class UsersService {
     return this.http.get(`${this.API_URI}/users`);
   }
 
-  getUser(id: string){
+  getUser(id: number){
     return this.http.get(`${this.API_URI}/users/${id}`);
   }
 
@@ -24,11 +24,11 @@ export class UsersService {
     return this.http.post(`${this.API_URI}/users`,user);
   }
 
-  deleteUser(id: string){
+  deleteUser(id: number){
     return this.http.delete(`${this.API_URI}/users/${id}`);
   }
 
-  updateUser(user: Users, id: string): Observable <any>{
+  updateUser(user: Users, id: number): Observable <any>{
     return this.http.put(`${this.API_URI}/users/${id}`,user);
   }
 }

@@ -3,20 +3,53 @@
     width: 109%;
     margin-right: -4%;
     margin-top: 1%;
-    padding: 2%;
-    border-color: white;
+    border: #d9dde4 solid;
+    /*padding: 2%;*/
  }
  
- .btn{
-     
-    margin-top: -4%;
-    margin-left: -3%;
+ .btn-custom{
+    color: white;
     background-color: #876BAD;
-    border-color: #876BAD;
- 
- 
+    border-color: #a9a0b6;
+    border-radius: 1ch;
+ }
+
+ .btn-add{
+    color: white;
+    background-color: #876BAD;
+    border-color: #a9a0b6;
+    border-radius: 1ch;
+    font-size: large;
+    font-weight: bolder;
+    height: 60%;
+    width: 50%;
+ }
+
+ .accions{
+    display: flex;
+    justify-content: flex-start;
+    
+ }
+
+ .btn-del{
+   font-size: 15px;
+   background-color: #e2a4dd;
+   border-color: #6b87ad;
+   border-radius: 1ch;
  }
  
+ .btn-edit{
+   font-size: 15px;
+   background-color: #99c1e7;
+   border-color: #876BAD;
+   border-radius: 1ch;
+   margin-right: 1em;
+ }
+
+ .contact-wrapper{
+   box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+}
+
  .card2{
     background-color: #fff;
     float: right;
