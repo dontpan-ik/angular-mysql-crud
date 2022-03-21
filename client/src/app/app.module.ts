@@ -35,6 +35,7 @@ import { EstadisticasGuard } from './guards/estadisticas.guard'
 import { ProveedoresGuard } from './guards/proveedores.guard'
 
 
+import { RegistroComponent } from './components/registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { ProveedoresGuard } from './guards/proveedores.guard'
     UsuariosComponent,
     ProveedoresComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
