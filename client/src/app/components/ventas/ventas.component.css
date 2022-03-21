@@ -16,11 +16,11 @@
  }
  
  .card2{
-     background-color: #fff;
-     float: right;
-      width: 98%;
-      margin-right: 1%;
-      margin-top: 10%;
-      padding: 2%;
-      border-radius: 15px;
+    background-color: #fff;
+    float: right;
+    width: 86%;
+    margin-right: -3%;
+    margin-top: 10%;
+    padding: 5%;
+    border-radius: 15px;
   }
