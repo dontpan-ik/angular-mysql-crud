@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ClientesService } from 'src/app/services/clientes.service';
+import { Cliente } from 'src/app/models/cliente';
 
 @Component({
   selector: 'app-clientes',
@@ -11,10 +14,29 @@ export class ClientesComponent implements OnInit {
     id: 4,
     title: "Clientes",
   }
-  title = "Clientes";
-  constructor() { }
+  clientes: any =[];
+  constructor(private router: Router, private clientesService: ClientesService) { }
 
   ngOnInit(): void {
+    this.getClients()
   }
 
+  getClients(){
+    this.clientesService.getClientes().subscribe(
+      res =>{
+        this.clientes=res;
+      },
+      err=>{
+        console.log(err);
+      }
+    )
+  }
+
+  searchCliente(){
+    
+  }
+
+  deleteCliente(id:number){
+    console.log(id);
+  }
 }
