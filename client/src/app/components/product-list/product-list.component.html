@@ -1,23 +1,27 @@
 <app-header [titleComp]="title"></app-header>
 <app-menu></app-menu>
 <!--<div class="row"> --><!-- THIS IS FIXED BY ADDING THE HOSTBIDING ON THE COMPONENT .TS FILE-->
-    <div class="col-4" *ngFor="let product of products">
-        <div class="card text-center ">
-            <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
-              {{product.name}}
-              <button class= "btn btn-danger" (click)="deleteProduct(product.product_id)">
-                <i class="fa-solid fa-trash" ></i>
-              </button>
-            </div>
-            <!--<img [src]="game.image" class= "card-img-top">-->
-            <div class="card-body">
-              <p>{{product.description}}</p>
-              <!--<a class= "btn btn-info btn-block" (click)="editProduct(product.product_id)">-->
-              <a [routerLink]="['/products/edit', product.product_id]" class= "btn btn-info btn-block">
-                EDIT PRODUCT
-              </a>
-              <i class="fa-solid fa-circle-plus"></i>
-            </div>
-        </div>   
+    <div class="card2">
+      <div class="row">
+        <div class="col-4" *ngFor="let product of products">
+          <div class="card text-center ">
+              <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
+                {{product.name}}
+                <button class= "btn btn-danger" (click)="deleteProduct(product.product_id)">
+                  <i class="fa-solid fa-trash" ></i>
+                </button>
+              </div>
+              <!--<img [src]="game.image" class= "card-img-top">-->
+              <div class="card-body">
+                <p>{{product.description}}</p>
+                <!--<a class= "btn btn-info btn-block" (click)="editProduct(product.product_id)">-->
+                <a [routerLink]="['/products/edit', product.product_id]" class= "btn btn-info btn-block">
+                  EDIT PRODUCT
+                </a>
+                <i class="fa-solid fa-circle-plus"></i>
+              </div>
+          </div>   
+      </div>
+      </div>
     </div>
 <!--</div> -->

@@ -24,24 +24,55 @@ export class ProductFormComponent implements OnInit {
     image_url: 'NOT JET'
   }
 
+  edit :boolean = false;
+
+  title = "Agrega Producto";
+
   constructor(private productService: ProductsService, private router: Router, private activedRoute: ActivatedRoute ) { }
 
   ngOnInit(): void {
     const params = this.activedRoute.snapshot.params;
-  }
+    console.log(params['product_id'])
+    if(params['product_id']){
+      this.productService.getProduct(params['product_id']).subscribe(
+        res=>{
+          this.product=res;
+          this.edit=true;
+          //console.log(this.product);
+        },
+        err=>{
+          console.log(err);
+        }
+      )
+    }
 
+  }
+  
   saveNewProduct(): void {
     console.log(this.product)
     this.productService.saveProduct(this.product)
       .subscribe(
         res=>{
-          console.log(res);
           this.router.navigate(['/products']);
         },
         err =>{
           console.log(err);
         }
       )
+  }
+
+  updateProduct():void{
+    var id = this.product.product_id || 0;
+    //this.productService.updateProduct(this.product,this.product.product_id);
+    this.productService.updateProduct(this.product,id).subscribe(
+      res=>{
+        console.log(res);
+        this.router.navigate(['/products']);
+      },
+      err=>{
+        console.log(err);
+      }
+    )
   }
 
 }

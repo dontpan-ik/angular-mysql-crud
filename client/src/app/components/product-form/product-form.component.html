@@ -1,60 +1,57 @@
-<div class="box">
-    <div class="col-md-8">
-        <div class="card">
-          <div class="card-body">
-            <form>
-                <div class="box"><h3>Captura Producto</h3></div><hr>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                      <label >Nombre</label>
-                      <input type="text" class="form-control" [(ngModel)]="product.name" name="name" placeholder="Nombre">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label >Marca</label>
-                      <input type="text" class="form-control" [(ngModel)]="product.brand" name="brand" placeholder="Marca">
-                    </div>
-                  </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label >Status</label>
-                        <input type="text" class="form-control" [(ngModel)]="product.status" name="status" placeholder="Status">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label >Categoria</label>
-                        <select name="category_id" class="form-control" [(ngModel)]="product.category_id">
-                            <option value="1" selected >ACCESORIOS</option>
-                            <option value="2">All</option>
-                            <option value="3">COSMETICOS</option>
-                            <option value="4">KIT</option>
-                            <option value="5">SKIN CARE</option>
-                      </select>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                      <label >Public Price</label>
-                      <input type="text" class="form-control" [(ngModel)]="product.public_price" name="public_price" placeholder="Public Price">
-                    </div>
-                    <div class="form-group col-md-4">
-                      <label >Suplier Price</label>
-                      <input type="text" class="form-control" [(ngModel)]="product.suplier_price" name="suplier_price" placeholder="Suplier Price">
-                    </div>
-                    <div class="form-group col-md-2">
-                      <label >Stock</label>
-                      <input type="text" class="form-control" [(ngModel)]="product.stock" name="stock" placeholder="0">
-                    </div>
-                  </div>
-                <div class="form-group">
-                  <label >Descripcion</label>
-                  <input type="text" class="form-control" [(ngModel)]="product.description" name="description" placeholder="Descripcion">
-                </div>
-                <div class="form-group">
-                  <label >image</label>
-                  <input type="text" class="form-control"  placeholder="Not implemented">
-                </div>
-                <button class="btn btn-success btn-block" (click)="saveNewProduct()">SAVE</button>
-              </form>
-         </div>
-       </div>
-    </div>
+<app-header [titleComp]="title"></app-header>
+<app-menu></app-menu>
+<div class="card">
+  <div class="card-body">
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+              <label >Nombre</label>
+              <input type="text" class="form-control" [(ngModel)]="product.name" name="name" placeholder="Nombre">
+            </div>
+            <div class="form-group col-md-6">
+              <label >Marca</label>
+              <input type="text" class="form-control" [(ngModel)]="product.brand" name="brand" placeholder="Marca">
+            </div>
+          </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label >Status</label>
+                <input type="text" class="form-control" [(ngModel)]="product.status" name="status" placeholder="Status">
+            </div>
+            <div class="form-group col-md-6">
+                <label >Categoria</label>
+                <select name="category_id" class="form-control" [(ngModel)]="product.category_id">
+                    <option value="1" selected >ACCESORIOS</option>
+                    <option value="2">All</option>
+                    <option value="3">COSMETICOS</option>
+                    <option value="4">KIT</option>
+                    <option value="5">SKIN CARE</option>
+              </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+              <label >Public Price</label>
+              <input type="text" class="form-control" [(ngModel)]="product.public_price" name="public_price" placeholder="Public Price">
+            </div>
+            <div class="form-group col-md-4">
+              <label >Suplier Price</label>
+              <input type="text" class="form-control" [(ngModel)]="product.suplier_price" name="suplier_price" placeholder="Suplier Price">
+            </div>
+            <div class="form-group col-md-2">
+              <label >Stock</label>
+              <input type="text" class="form-control" [(ngModel)]="product.stock" name="stock" placeholder="0">
+            </div>
+          </div>
+        <div class="form-group">
+          <label >Descripcion</label>
+          <input type="text" class="form-control" [(ngModel)]="product.description" name="description" placeholder="Descripcion">
+        </div>
+        <!--<div class="form-group">
+          <label >image</label>
+          <input type="text" class="form-control"  placeholder="Not implemented">
+        </div> -->
+        <button class="btn btn-success btn-block" (click)="edit ? updateProduct() : saveNewProduct()">Guardar</button>
+      </form>
+ </div>
 </div>

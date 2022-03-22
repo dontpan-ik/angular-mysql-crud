@@ -8,7 +8,7 @@ import { ProductsService } from '../../services/products.service'
 })
 export class ProductListComponent implements OnInit {
 
-  @HostBinding( 'class') classes = 'row';
+  //@HostBinding( 'class') classes = 'row';
 
   title = "Productos";
 

@@ -1,19 +1,50 @@
 
 .header-com {
   margin-top: 50px;
-  margin-left: 112px;
+  margin-left: 119px;
   width: 104%;
+  height: 80px;
   background-color: white;
   border-radius: 10px;
 }
+
+.title{
+  margin-top: 1em;
+}
+
+.title-icon{
+  margin-top: -3em;
+}
+.main-header{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.main-header-body{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card-border{
+  background-color: white;
+  margin-left: 8em;
+  margin-top: 3em;
+  width: 102%;
+  border-radius: 10px;
+}
+.row-header{
+  display: flex;
+  align-items: center;
+}
+
 h3 {
   font-size: 32px;
   color: #876bad;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.login {
-    justify-content: right;
-}
+
 .bi {
     position: relative;
     display: table-cell;
