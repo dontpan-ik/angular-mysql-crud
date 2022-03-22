@@ -9,7 +9,10 @@ import { User } from 'src/app/models/user';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  navbar: any = {
+    id: 8,
+    title: "Inicio",
+  }
   user: User={
     user_id: 0,
     rol: "",
