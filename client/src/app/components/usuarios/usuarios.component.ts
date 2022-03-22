@@ -13,7 +13,6 @@ export class UsuariosComponent implements OnInit {
     id: 7,
     title: "Usuarios",
   }
-  title = "Usuarios";
 
   user: Users={
     user_id: 0,

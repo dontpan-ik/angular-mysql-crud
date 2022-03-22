@@ -1,1 +1,59 @@
-<p>cliente-form works!</p>
+<app-header [titleComp]="navbar"></app-header>
+<app-menu></app-menu>
+<div class="card-form">
+  <div class="card-body">
+    <div style="display: flex; justify-content: flex-end; margin-bottom: 10px;">
+      <button class="btn-regresar" (click)="regresar()">regresar</button>
+    </div>
+    <div class="contact-wrapper">
+      <div class="contact-form">
+        <form>
+          <p>
+              <label>Nombre</label>
+              <input type="text" [(ngModel)]="cliente.name" name="name" placeholder="nombre">
+          </p>
+          <p>
+              <label>Apellido</label>
+              <input type="text" [(ngModel)]="cliente.last_name" name="last_name" placeholder="apellido">
+          </p>
+          <p>
+              <label>Correo</label>
+              <input type="email" [(ngModel)]="cliente.email" name="email" placeholder="correo">
+          </p>
+          <p>
+              <label>Contraseña</label>
+              <input type="password" [(ngModel)]="cliente.password" name="password" placeholder="contraseña">
+          </p>
+          <p>
+            <label>Rol</label>
+            <input type="text" [(ngModel)]="cliente.rol_id" name="rol_id" placeholder="rol">
+        </p>
+        <p>
+            <label>Estatus</label>
+            <input type="text" [(ngModel)]="cliente.status" name="status" placeholder="estatus">
+        </p>
+        <p>
+          <label>ID cliente</label>
+          <input type="text" [(ngModel)]="cliente.client_id" name="client_id" placeholder="ID cliente">
+      </p>
+      <p>
+          <label>Domicilio</label>
+          <input type="text" [(ngModel)]="cliente.address" name="address" placeholder="domicilio">
+      </p>
+      <p>
+        <label>Numeor telefonico</label>
+        <input type="text" [(ngModel)]="cliente.phone_number" name="phone_number" placeholder="Numero Telefonico">
+    </p>
+    <p>
+        <label>Fecha de nacimiento</label>
+        <input type="text" [(ngModel)]="cliente.birth_date" name="birth_date" placeholder="Fecha de nacimeiento">
+    </p>
+          <p class="block">
+              <button  type="submit" (click)="edit ? updateCliente() : saveNewCliente()">Guardar</button>
+          </p>
+      </form>
+          
+      </div>
+  </div>
+  </div>
+</div>
