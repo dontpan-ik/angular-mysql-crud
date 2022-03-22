@@ -1,0 +1,109 @@
+.card-form{
+  background-color: white;
+  margin-left: 8em;
+  margin-top: 2em;
+  width: 102%;
+  border-radius: 10px;
+}
+
+.content{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5em;
+}
+
+.contact-wrapper >*{
+  padding: 1em;
+}
+
+.contact-form{
+  background: #faf9f7;
+}
+
+/* USANDO CSS GRID  */
+.contact-form form{    
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact-form form .block{
+  grid-column: 1/3;
+}
+.contact-form p{    
+  margin: 0;
+  padding: 1em;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea{    
+  width: 100%;
+  
+  padding: .4em;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+
+}
+
+.contact-form form button{
+  border: 0;
+  text-transform: uppercase;
+  padding: 1em;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  background-color: #876BAD;
+}
+
+.contact-form form button:hover,
+.contact-form form button:focus{
+  background: #ca31c3;
+  color: #fff;
+  transition: background-color 1s ease-out;
+  outline: 0;
+}
+
+.contact-info h4,
+.contact-info ul,
+.contact-info p{
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.contact-info ul{
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info ul li{
+  padding: .3em;
+}
+
+.btn-regresar{
+  color: white;
+    background-color: #876BAD;
+    border-color: #a9a0b6;
+    border-radius: 1ch;
+    font-size: large;
+    font-weight: bolder;
+}
+
+/* LARGE SCREEN */
+/*
+@media (min-width: 700px){
+  body{
+      padding: 0 4rem;
+  }
+
+  .contact-wrapper{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  
+  .contact-info h4,
+  .contact-info ul,
+  .contact-info p{
+      padding: 1em;
+      text-align: left;
+  }
+}*/

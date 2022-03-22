@@ -22,6 +22,7 @@ import { ClientesGuard } from './guards/clientes.guard'
 import { UsuariosGuard } from './guards/usuarios.guard'
 import { EstadisticasGuard } from './guards/estadisticas.guard'
 import { ProveedoresGuard } from './guards/proveedores.guard'
+import { UserFormComponent } from './components/forms/user-form/user-form.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'  },
@@ -30,7 +31,11 @@ const routes: Routes = [
   { path: 'products/add', component: ProductFormComponent },
   { path: 'products/edit/:product_id', component: ProductFormComponent},
   { path: 'compras', component: ComprasComponent, canActivate: [ComprasGuard]},
+
   { path: 'usuarios', component: UsuariosComponent, canActivate:[UsuariosGuard]},
+  { path: 'usuarios/add', component: UserFormComponent},
+  { path: 'usuarios/edit/:user_id', component: UserFormComponent},
+  
   { path: 'estadisticas', component: EstadisticasComponent, canActivate: [EstadisticasGuard]},
   { path: 'proveedores', component: ProveedoresComponent, canActivate: [ProveedoresGuard]},
   { path: 'ventas', component: VentasComponent, canActivate: [VentasGuard]},

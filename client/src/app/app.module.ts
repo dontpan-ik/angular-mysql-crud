@@ -37,6 +37,7 @@ import { ProveedoresGuard } from './guards/proveedores.guard'
 
 
 import { RegistroComponent } from './components/registro/registro.component';
+import { UserFormComponent } from './components/forms/user-form/user-form.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { RegistroComponent } from './components/registro/registro.component';
     ProveedoresComponent,
     HeaderComponent,
     LoginComponent,
-    RegistroComponent
+    RegistroComponent,
+    UserFormComponent
   ],
   imports: [
     BrowserModule,
