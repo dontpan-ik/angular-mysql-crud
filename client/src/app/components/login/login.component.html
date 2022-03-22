@@ -13,8 +13,18 @@
             <form class="login__container--form">
                 <input class="input" type="email" [(ngModel)]="login.email"  name="email" placeholder="e-mail">
                 <input class="input" type="password" [(ngModel)]="login.password"  name="password" placeholder="password">
-                <div *ngIf="err_message === true" class="alert alert-danger" role="alert">
-                    ¡Correo o Contraseña Incorrectos!
+                
+                <div *ngIf="err_message === true" class="alert alert-danger text-center" role="alert">
+                    <div class="container">
+                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                            <p>Datos incorrectos! </p>
+                            <div style="margin-top: -1em;" >
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeError()">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <button class="button" (click)="login_into()">Iniciar Sesion</button>
                 <div class="login__container--remember-me">

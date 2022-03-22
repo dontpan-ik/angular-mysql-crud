@@ -1,0 +1,46 @@
+<app-header [titleComp]="title"></app-header>
+<app-menu></app-menu>
+<div class="card-form">
+  <div class="card-body">
+    <div style="display: flex; justify-content: flex-end; margin-bottom: 10px;">
+      <button class="btn-regresar" (click)="regresar()">regresar</button>
+    </div>
+    <div class="contact-wrapper">
+      <div class="contact-form">
+          <form>
+              <p>
+                  <label>Nombre</label>
+                  <input type="text" [(ngModel)]="user.name" name="name" placeholder="nombre">
+              </p>
+              <p>
+                  <label>Apellido</label>
+                  <input type="text" [(ngModel)]="user.last_name" name="last_name" placeholder="apellido">
+              </p>
+              <p>
+                  <label>Correo</label>
+                  <input type="email" [(ngModel)]="user.email" name="email" placeholder="correo">
+              </p>
+              <p>
+                  <label>Contraseña</label>
+                  <input type="password" [(ngModel)]="user.password" name="password" placeholder="Contraseña">
+              </p>
+              <p>
+                <label>Rol</label>
+                <input type="text" [(ngModel)]="user.rol_id" name="rol_id">
+            </p>
+            <p>
+                <label>Estatus</label>
+                <input type="text" [(ngModel)]="user.status" name="status">
+            </p>
+              <!--<p class="block">
+                  <label>Message</label>
+                  <textarea name="message" rows="3"></textarea>
+              </p >-->
+              <p class="block">
+                  <button  type="submit" (click)="edit ? updateUser() : saveNewUser()">Guardar</button>
+              </p>
+          </form>
+      </div>
+  </div>
+  </div>
+</div>

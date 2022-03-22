@@ -157,6 +157,14 @@ body{
     margin: 10px 0px;
     outline: none;
 }
+
+.button:hover,
+.button:focus{
+  background: #ca31c3;
+  color: #fff;
+  transition: background-color 1s ease-out;
+  outline: 0;
+}
 .footer{
     background-color: #000000;
     display: flex;
@@ -190,6 +198,12 @@ body{
         align-items: flex-start;
         flex-direction: column;
     }
+}
 
-    
+.close{
+    border: none;
+    background: none;
+    outline: none;
+    color: rgba(255, 0, 0, 0.623);
+    font-weight: bolder;
 }

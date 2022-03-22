@@ -17,6 +17,8 @@ export class LoginComponent implements OnInit {
     password: ""
   };
   err_message = false;
+
+
   
   constructor(private loginService: LoginService, private router: Router, private activedRoute: ActivatedRoute) { }
 
@@ -59,6 +61,10 @@ export class LoginComponent implements OnInit {
       default:
         return '';
     }
+  }
+
+  closeError(){
+    this.err_message=false;
   }
 
   
