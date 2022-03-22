@@ -23,7 +23,7 @@ class SuplierController {
     get_suplier(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { suplier_id } = req.params;
-            const suplier = yield database_1.default.query('SELECT * FROM supliers WHERE user_id = ?', [suplier_id]);
+            const suplier = yield database_1.default.query('SELECT * FROM supliers WHERE suplier_id = ?', [suplier_id]);
             if (suplier.length > 0) {
                 return res.json(suplier[0]);
             }

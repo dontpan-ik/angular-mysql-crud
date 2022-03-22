@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProveedoresService } from 'src/app/services/proveedores.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-proveedores',
@@ -10,10 +12,36 @@ export class ProveedoresComponent implements OnInit {
     id: 5,
     title: "Proveedores",
   }
-  title = "Proveedores";
-  constructor() { }
+
+  provedores: any =[];
+  
+  constructor(private router: Router, private proveedoresService: ProveedoresService) { }
 
   ngOnInit(): void {
+    this.getProvedores();
   }
 
+  getProvedores(){
+    this.proveedoresService.getProveedores().subscribe(
+      res =>{
+        this.provedores=res;
+      },
+      err =>{
+        console.log(err);
+      }
+    )
+  }
+
+  deleteProveedor(id: number){
+    this.proveedoresService.deleteProveedor(id).subscribe(
+      res =>{
+        this.getProvedores();
+      },
+      err => console.log(err)
+    )
+  }
+
+  searchProveedor(){
+    
+  }
 }

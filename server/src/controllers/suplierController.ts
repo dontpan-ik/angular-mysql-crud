@@ -11,7 +11,7 @@ class SuplierController{
 
     public async get_suplier (req: Request, res: Response){
         const {suplier_id} = req.params;
-        const suplier = await pool.query('SELECT * FROM supliers WHERE user_id = ?',[suplier_id]);
+        const suplier = await pool.query('SELECT * FROM supliers WHERE suplier_id = ?',[suplier_id]);
         if(suplier.length > 0){
             return res.json(suplier[0]);
         };

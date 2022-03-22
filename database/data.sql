@@ -279,4 +279,17 @@ INSERT INTO order_details(order_id, product_id,amount,charge) VALUES(
     94.99
 );
 
+INSERT INTO supliers(company_name, category,email,address,contact_number,status) VALUES(
+    'Ali Sales',
+    'Importador',
+    'ali_sales@alisales.com',
+    'AV Holley DR "5277',
+    '33-15-88-55-02',
+    'ACTIVE'
+);
+
+/*NOTES*/
+
 SELECT * FROM orders o JOIN order_details d on o.order_id = d. order_id WHERE o.order_id = 1;
+
+SELECT * FROM users u JOIN clients c on u.client_id=c.client_id WHERE u.client_id = 1;

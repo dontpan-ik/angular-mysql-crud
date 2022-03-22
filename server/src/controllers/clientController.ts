@@ -5,13 +5,13 @@ import pool from '../database';
 class ClientController{
 
     public async get_client_list (req: Request, res: Response){
-        const clients = await pool.query('SELECT * FROM clients');
+        const clients = await pool.query('SELECT * FROM users u JOIN clients c on u.client_id=c.client_id');
         res.json(clients);
     }
 
     public async get_client (req: Request, res: Response){
         const {client_id} = req.params;
-        const client = await pool.query('SELECT * FROM users WHERE user_id = ?',[client_id]);
+        const client = await pool.query('SELECT * FROM users u JOIN clients c on u.client_id=c.client_id WHERE u.client_id = ?',[client_id]);
         if(client.length > 0){
             return res.json(client[0]);
         };
