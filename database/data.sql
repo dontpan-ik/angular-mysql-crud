@@ -248,4 +248,35 @@ INSERT INTO users(name,last_name,email,password,rol_id,status)VALUES(
     'ACTIVE'
 );
 
+/*VENTAS*/
 
+INSERT INTO clients(address, phone_number, birth_date) VALUES(
+    'Av. Jaime Pinto #3355 Col Atlas',
+    '33-22-44-55-66',
+    '1989-06-22'
+);
+
+INSERT INTO orders(client_id, total_items, total_charge, status) VALUES(
+    1,
+    2,
+    139.99,
+    'ACTIVE'
+);
+
+SELECT * FROM orders;
+
+INSERT INTO order_details(order_id, product_id,amount,charge) VALUES(
+    1,
+    7,
+    1,
+    45
+);
+
+INSERT INTO order_details(order_id, product_id,amount,charge) VALUES(
+    1,
+    3,
+    1,
+    94.99
+);
+
+SELECT * FROM orders o JOIN order_details d on o.order_id = d. order_id WHERE o.order_id = 1;

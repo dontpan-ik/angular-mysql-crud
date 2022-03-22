@@ -14,6 +14,10 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { ProductsService } from './services/products.service';
 import { LoginService } from './services/login.service';
 import { UsersService } from './services/users.service';
+import { VentasService } from './services/ventas.service';
+import { ComprasService } from './services/compras.service';
+import { ProveedoresService } from './services/proveedores.service';
+import { ClientesService } from './services/clientes.service';
 
 import { HomeComponent } from './components/home/home.component';
 import { VentasComponent } from './components/ventas/ventas.component';
@@ -38,6 +42,10 @@ import { ProveedoresGuard } from './guards/proveedores.guard'
 
 import { RegistroComponent } from './components/registro/registro.component';
 import { UserFormComponent } from './components/forms/user-form/user-form.component';
+import { VentasFormComponent } from './components/forms/ventas-form/ventas-form.component';
+import { ClienteFormComponent } from './components/forms/cliente-form/cliente-form.component';
+import { ProveedoresFormComponent } from './components/forms/proveedores-form/proveedores-form.component';
+import { ComprasFormComponent } from './components/forms/compras-form/compras-form.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +65,11 @@ import { UserFormComponent } from './components/forms/user-form/user-form.compon
     HeaderComponent,
     LoginComponent,
     RegistroComponent,
-    UserFormComponent
+    UserFormComponent,
+    VentasFormComponent,
+    ClienteFormComponent,
+    ProveedoresFormComponent,
+    ComprasFormComponent
   ],
   imports: [
     BrowserModule,
@@ -70,6 +82,11 @@ import { UserFormComponent } from './components/forms/user-form/user-form.compon
     ProductsService,
     LoginService,
     UsersService,
+    VentasService,
+    ComprasService,
+    ProveedoresService,
+    ClientesService,
+    ComprasService,
     LoginGuardGuard,
     HomeGuard,
     ProductsGuard,
