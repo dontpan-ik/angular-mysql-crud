@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./proveedores.component.css']
 })
 export class ProveedoresComponent implements OnInit {
-
+  navbar: any = {
+    id: 5,
+    title: "Proveedores",
+  }
   title = "Proveedores";
   constructor() { }
 

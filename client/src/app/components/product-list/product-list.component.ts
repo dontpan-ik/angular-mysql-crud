@@ -10,6 +10,11 @@ export class ProductListComponent implements OnInit {
 
   //@HostBinding( 'class') classes = 'row';
 
+  navbar: any = {
+    id: 3,
+    title: "Productos",
+  }
+
   title = "Productos";
 
   products: any =[];

@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VentasComponent implements OnInit {
 
+  navbar: any = {
+    id: 1,
+    title: "Ventas",
+  }
   title = "Ventas";
   constructor() { }
 

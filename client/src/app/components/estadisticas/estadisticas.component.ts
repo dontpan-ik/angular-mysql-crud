@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./estadisticas.component.css']
 })
 export class EstadisticasComponent implements OnInit {
-
+  navbar: any = {
+    id: 6,
+    title: "Estadisticas",
+  }
   title = "Estadisticas";
   constructor() { }
 

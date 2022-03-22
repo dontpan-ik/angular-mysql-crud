@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;1,100&display=swap');
 
 .header-com {
   margin-top: 50px;
@@ -9,7 +10,12 @@
 }
 
 .title{
-  margin-top: 1em;
+  margin-left: -10%;
+}
+
+.title-component {
+  font-family: Poppins, "sans-serif";
+  padding-left: 3% !important;
 }
 
 .title-icon{
@@ -19,6 +25,11 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+
+svg{
+  color:#876bad;
+  margin-top: 25%;
 }
 
 .main-header-body{
@@ -46,16 +57,16 @@ h3 {
 }
 
 .bi {
-    position: relative;
-    display: table-cell;
-    width: 25px;
-    height: 35px;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 5px;
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-left: 20px;
+  position: relative;
+  display: table-cell;
+  width: 37px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 5px;
+  margin-top: -10px;
+  margin-right: 10px;
+  margin-left: 20px;
   }
 
   p{

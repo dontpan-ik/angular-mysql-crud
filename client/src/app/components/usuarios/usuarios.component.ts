@@ -9,6 +9,10 @@ import { Users } from 'src/app/models/users';
   styleUrls: ['./usuarios.component.css']
 })
 export class UsuariosComponent implements OnInit {
+  navbar: any = {
+    id: 7,
+    title: "Usuarios",
+  }
   title = "Usuarios";
 
   user: Users={
