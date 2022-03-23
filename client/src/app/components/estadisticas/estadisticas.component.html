@@ -1,2 +1,29 @@
 <app-header [titleComp]="navbar"></app-header>
 <app-menu></app-menu>
+
+<div class="card2">
+    <div class="row">
+        <div class="col-6">
+            <div style="display: block">
+                <canvas baseChart
+                  [data]="barChartData"
+                  [options]="barChartOptions"
+                  [plugins]="barChartPlugins"
+                  [type]="barChartType"
+                  (chartHover)="chartHovered($event)"
+                  (chartClick)="chartClicked($event)">
+                </canvas>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="chart">
+                <canvas baseChart style="max-height: 300px;"
+                        [data]="pieChartData"
+                        [type]="pieChartType"
+                        [options]="pieChartOptions"
+                        [plugins]="pieChartPlugins">
+                </canvas>
+              </div>
+        </div>
+    </div>
+</div>

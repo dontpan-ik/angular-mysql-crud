@@ -4,7 +4,10 @@
     <app-menu></app-menu>
 
 <div class="card">
-
-    <h4><p>Bienvenido <strong>{{user.name}}</strong> {{user.email}} </p></h4>
-    
+    <div class="col-7 d-flex flex-nowrap navbar-text justify-content-end">
+        <div class="order-1">
+        <img src="../../../assets/images/KGIRL_ICONO LILA.png" width="290px" heigh="245px" routerLink="/home" routerLinkActive="active-link" />
+          <div class="title">Bienvenido {{ user.name }} {{ user.last_name }}</div>
+          <div class="title">{{user.rol}}</div>
+        </div>
 </div>

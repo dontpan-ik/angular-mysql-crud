@@ -13,11 +13,14 @@ export class HomeComponent implements OnInit {
     id: 8,
     title: "Inicio",
   }
+  data: any;
+  
   user: User={
     user_id: 0,
     rol: "",
     email: "",
     name:  "",
+    last_name: "",
     token: ""
   };
   constructor(private loginService: LoginService, private router: Router, private activedRoute: ActivatedRoute) { }

@@ -10,6 +10,8 @@ import { ProductFormComponent } from './components/product-form/product-form.com
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
+// ng2-charts
+import { NgChartsModule } from 'ng2-charts';
 
 import { ProductsService } from './services/products.service';
 import { LoginService } from './services/login.service';
@@ -76,7 +78,8 @@ import { ComprasFormComponent } from './components/forms/compras-form/compras-fo
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgChartsModule,
   ],
   providers: [
     ProductsService,

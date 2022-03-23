@@ -5,8 +5,11 @@
     float: right;
     width: 102%;
     margin-right: -12%;
-    margin-top: 3%;
-    padding: 2%;
+    margin-top: 2%;
+    padding: 5%;
     border-radius: 15px;
+}
+.title{
+    font-size: 32px;
 }
 
