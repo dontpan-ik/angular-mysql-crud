@@ -47,6 +47,7 @@ import { VentasFormComponent } from './components/forms/ventas-form/ventas-form.
 import { ClienteFormComponent } from './components/forms/cliente-form/cliente-form.component';
 import { ProveedoresFormComponent } from './components/forms/proveedores-form/proveedores-form.component';
 import { ComprasFormComponent } from './components/forms/compras-form/compras-form.component';
+import { OrderDetailsComponent } from './components/common/order-details/order-details.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { ComprasFormComponent } from './components/forms/compras-form/compras-fo
     VentasFormComponent,
     ClienteFormComponent,
     ProveedoresFormComponent,
-    ComprasFormComponent
+    ComprasFormComponent,
+    OrderDetailsComponent
   ],
   imports: [
     BrowserModule,

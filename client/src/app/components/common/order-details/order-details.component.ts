@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Users } from 'src/app/models/users';
 import { Router, ActivatedRoute } from '@angular/router';
-import { VentasService } from 'src/app/services/ventas.service';
 
 @Component({
-  selector: 'app-ventas-form',
-  templateUrl: './ventas-form.component.html',
-  styleUrls: ['./ventas-form.component.css']
+  selector: 'app-order-details',
+  templateUrl: './order-details.component.html',
+  styleUrls: ['./order-details.component.css']
 })
-export class VentasFormComponent implements OnInit {
+export class OrderDetailsComponent implements OnInit {
 
   navbar: any = {
     id: 1,
@@ -22,5 +20,6 @@ export class VentasFormComponent implements OnInit {
   regresar(){
     this.router.navigate(['/ventas']);
   }
+
 
 }

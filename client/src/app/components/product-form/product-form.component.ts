@@ -26,7 +26,10 @@ export class ProductFormComponent implements OnInit {
 
   edit :boolean = false;
 
-  title = "Agrega Producto";
+  navbar: any = {
+    id: 3,
+    title: "Productos",
+  }
 
   constructor(private productService: ProductsService, private router: Router, private activedRoute: ActivatedRoute ) { }
 
