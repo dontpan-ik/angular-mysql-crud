@@ -59,3 +59,8 @@
     padding: 5%;
     border-radius: 10px;
   }
+
+  .btn-primary{
+      background-color: #876BAD;
+      border-color: #876BAD;
+  }

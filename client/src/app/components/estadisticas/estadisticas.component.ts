@@ -43,10 +43,9 @@ public barChartPlugins = [
 ];
 
 public barChartData: ChartData<'bar'> = {
-  labels: [ '2006', '2007', '2008', '2009', '2010', '2011', '2012' ],
+  labels: [ 'Jabones', 'Cremas', 'Sueros', 'Tonicos', 'Maquillaje', 'Mascarillas', 'Accesorios' ],
   datasets: [
-    { data: [ 65, 59, 80, 81, 56, 55, 40 ], label: 'Series A' },
-    { data: [ 28, 48, 40, 19, 86, 27, 90 ], label: 'Series B' }
+    { data: [ 65, 59, 80, 81, 56, 55, 40 ], label: 'Productos Vendidos' }
   ]
 };
 
@@ -78,9 +77,9 @@ public chartHovered({ event, active }: { event?: ChartEvent, active?: {}[] }): v
   }
 };
 public pieChartData: ChartData<'pie', number[], string | string[]> = {
-  labels: [ [ 'Download', 'Sales' ], [ 'In', 'Store', 'Sales' ], 'Mail Sales' ],
+  labels: [ [ 'Enero' ], [ 'Marzo' ], 'Febrero' ],
   datasets: [ {
-    data: [ 300, 500, 100 ]
+    data: [ 2000, 4120, 1200 ]
   } ]
 };
 public pieChartType: ChartType = 'pie';

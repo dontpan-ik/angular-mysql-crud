@@ -1,6 +1,7 @@
 <app-header [titleComp]="navbar"></app-header>
 <app-menu></app-menu>
 <div class="card2">
+  <button class="btn btn-primary" type="submit">Crear</button>
   <div class="row">
     <div class="col-3" *ngFor="let product of products | paginate: { itemsPerPage: 4, currentPage: p }">
       <div class="card text-center ">
