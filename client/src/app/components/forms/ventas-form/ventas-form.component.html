@@ -7,35 +7,29 @@
     </div>
     <div class="contact-wrapper">
       <div class="contact-form">
-          <!--<form>
+          <form>
+              
               <p>
-                  <label>Nombre</label>
-                  <input type="text" [(ngModel)]="user.name" name="name" placeholder="nombre">
+                  <label>Id cliente</label>
+                  <input type="text" [(ngModel)]="venta.client_id" name="last_name" placeholder="apellido">
               </p>
               <p>
-                  <label>Apellido</label>
-                  <input type="text" [(ngModel)]="user.last_name" name="last_name" placeholder="apellido">
+                  <label>Numero de Productos</label>
+                  <input type="text" [(ngModel)]="venta.total_items" name="email" placeholder="Numero de Productos">
               </p>
               <p>
-                  <label>Correo</label>
-                  <input type="email" [(ngModel)]="user.email" name="email" placeholder="correo">
+                  <label>Cargo Total</label>
+                  <input type="text" [(ngModel)]="venta.total_charge" name="password" placeholder="Cargo Total">
               </p>
-              <p>
-                  <label>Contraseña</label>
-                  <input type="password" [(ngModel)]="user.password" name="password" placeholder="Contraseña">
-              </p>
-              <p>
-                <label>Rol</label>
-                <input type="text" [(ngModel)]="user.rol_id" name="rol_id">
-            </p>
             <p>
                 <label>Estatus</label>
-                <input type="text" [(ngModel)]="user.status" name="status">
+                <input type="text" [(ngModel)]="venta.status" name="status">
             </p>
+
               <p class="block">
-                  <button  type="submit" (click)="edit ? updateVenta() : saveNewVenta()">Guardar</button>
+                  <button  type="submit" (click)="saveNewVenta()">Guardar</button>
               </p>
-          </form> -->
+          </form>
       </div>
   </div>
   </div>

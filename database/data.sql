@@ -34,7 +34,7 @@ INSERT INTO products(name,brand,category_id,description,public_price,suplier_pri
     62.12,
     15,
     'ACTIVE',
-    'NOT JET'
+    '../../../assets/images/Productos/045 TERMO YAKULT.JPG'
 );
 
 INSERT INTO products(name,brand,category_id,description,public_price,suplier_price,stock,status,image_url)VALUES(
@@ -46,7 +46,7 @@ INSERT INTO products(name,brand,category_id,description,public_price,suplier_pri
     13.12,
     55,
     'ACTIVE',
-    'NOT JET'
+    '../../../assets/images/Productos/043 MASCARILLA LIMPIADORA PROFUNDA.JPG'
 );
 
 INSERT INTO products(name,brand,category_id,description,public_price,suplier_price,stock,status,image_url)VALUES(
@@ -58,7 +58,7 @@ INSERT INTO products(name,brand,category_id,description,public_price,suplier_pri
     88.00,
     22,
     'ACTIVE',
-    'NOT JET'
+    '../../../assets/images/Productos/055 TINTA INDELEBLE COTTONETE.JPEG'
 );
 
 INSERT INTO products(name,brand,category_id,description,public_price,suplier_price,stock,status,image_url)VALUES(
@@ -70,7 +70,7 @@ INSERT INTO products(name,brand,category_id,description,public_price,suplier_pri
     68.50,
     30,
     'ACTIVE',
-    'NOT JET'
+    '../../../assets/images/Productos/057 JABON FACIAL CONEJO YESNOW.JPG'
 );
 
 INSERT INTO products(name,brand,category_id,description,public_price,suplier_price,stock,status,image_url)VALUES(
@@ -82,7 +82,7 @@ INSERT INTO products(name,brand,category_id,description,public_price,suplier_pri
     68.50,
     30,
     'ACTIVE',
-    'NOT JET'
+    '../../../assets/images/Productos/058 JABON FACIAL TORONJA YESNOW.JPG'
 );
 
 INSERT INTO products(name,brand,category_id,description,public_price,suplier_price,stock,status,image_url)VALUES(
@@ -94,7 +94,7 @@ INSERT INTO products(name,brand,category_id,description,public_price,suplier_pri
     62.78,
     56,
     'ACTIVE',
-    'NOT JET'
+    '../../../assets/images/Productos/018 MASCARILLA SAILOR MOON.JPG'
 );
 
 INSERT INTO products(name,brand,category_id,description,public_price,suplier_price,stock,status,image_url)VALUES(
@@ -106,7 +106,7 @@ INSERT INTO products(name,brand,category_id,description,public_price,suplier_pri
     41.35,
     23,
     'ACTIVE',
-    'NOT JET'
+    '../../../assets/images/Productos/016 LABIAL MAGICO FLOR.JPG'
 );
 
 INSERT INTO products(name,brand,category_id,description,public_price,suplier_price,stock,status,image_url)VALUES(
@@ -118,7 +118,7 @@ INSERT INTO products(name,brand,category_id,description,public_price,suplier_pri
     68.00,
     54,
     'ACTIVE',
-    'NOT JET'
+    '../../../assets/images/Productos/044 RODILLO DE JADE.JPG'
 );
 
 INSERT INTO products(name,brand,category_id,description,public_price,suplier_price,stock,status,image_url)VALUES(
@@ -130,7 +130,7 @@ INSERT INTO products(name,brand,category_id,description,public_price,suplier_pri
     52.50,
     45,
     'ACTIVE',
-    'NOT JET'
+    '../../../assets/images/Productos/046 VENTILADOR ESPEJO.JPG'
 );
 
 INSERT INTO products(name,brand,category_id,description,public_price,suplier_price,stock,status,image_url)VALUES(
@@ -142,7 +142,7 @@ INSERT INTO products(name,brand,category_id,description,public_price,suplier_pri
     22.79,
     60,
     'ACTIVE',
-    'NOT JET'
+    '../../../assets/images/Productos/016 LABIAL MAGICO FLOR.JPG'
 );
 
 INSERT INTO products(name,brand,category_id,description,public_price,suplier_price,stock,status,image_url)VALUES(
@@ -154,7 +154,7 @@ INSERT INTO products(name,brand,category_id,description,public_price,suplier_pri
     22.79,
     60,
     'ACTIVE',
-    'NOT JET'
+    '../../../assets/images/Productos/047 LABIAL BRILLO BOLITAS.JPG'
 );
 
 INSERT INTO products(name,brand,category_id,description,public_price,suplier_price,stock,status,image_url)VALUES(
@@ -166,7 +166,7 @@ INSERT INTO products(name,brand,category_id,description,public_price,suplier_pri
     460,
     15,
     'ACTIVE',
-    'NOT JET'
+    '../../../assets/images/Productos/082 ESPUMA FACIAL LECHE ELENCE.JPEG'
 );
 
 INSERT INTO products(name,brand,category_id,description,public_price,suplier_price,stock,status,image_url)VALUES(
@@ -178,7 +178,7 @@ INSERT INTO products(name,brand,category_id,description,public_price,suplier_pri
     459,
     25,
     'ACTIVE',
-    'NOT JET'
+    '../../../assets/images/Productos/061 BALSAMO FRESA ULTRAMO.JPEG'
 );
 
 INSERT INTO products(name,brand,category_id,description,public_price,suplier_price,stock,status,image_url)VALUES(
@@ -190,11 +190,11 @@ INSERT INTO products(name,brand,category_id,description,public_price,suplier_pri
     490,
     29,
     'ACTIVE',
-    'NOT JET'
+    '../../../assets/images/Productos/060 KIT MASCARILLA HUEVO.JPG'
 );
 
 INSERT INTO products(name,brand,category_id,description,public_price,suplier_price,stock,status,image_url)VALUES(
-    'KIT: Piel seca V1',
+    'KIT: Piel seca V2',
     'Kgirl',
     4,
     'Tramiento facial para piel seca y deshidratada por las emisiones solar encontra de la piel',
@@ -202,7 +202,7 @@ INSERT INTO products(name,brand,category_id,description,public_price,suplier_pri
     535,
     17,
     'ACTIVE',
-    'NOT JET'
+    '../../../assets/images/Productos/060 KIT MASCARILLA HUEVO 2.JPG'
 );
 
 /* USERS */
