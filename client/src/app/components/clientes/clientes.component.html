@@ -21,15 +21,20 @@
       <thead>
         <tr>
           <th scope="col">Id</th>
-          <th scope="col">address</th>
-          <th scope="col">phone_number</th>
-          <th scope="col">birth_date</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Correo</th>
+          <th scope="col">Domicilio</th>
+          <th scope="col">Fecha de Nacimeinto</th>
           <th scope="col">Acciones</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let cli of clientes">
           <th scope="row">{{cli.client_id}}</th>
+          <th scope="col">{{cli.name}}</th>
+          <th scope="col">{{cli.last_name}}</th>
+          <th scope="col">{{cli.email}}</th>
           <td>{{cli.address}}</td>
           <td>{{cli.phone_number}}</td>
           <td>{{cli.birth_date}}</td>

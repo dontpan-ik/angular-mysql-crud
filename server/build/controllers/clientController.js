@@ -16,19 +16,29 @@ const database_1 = __importDefault(require("../database"));
 class ClientController {
     get_client_list(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const clients = yield database_1.default.query('SELECT * FROM clients');
+            const clients = yield database_1.default.query('SELECT * FROM users u JOIN clients c on u.client_id=c.client_id');
             res.json(clients);
         });
     }
     get_client(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { client_id } = req.params;
-            const client = yield database_1.default.query('SELECT * FROM users WHERE user_id = ?', [client_id]);
+            const client = yield database_1.default.query('SELECT * FROM users u JOIN clients c on u.client_id=c.client_id WHERE u.client_id = ?', [client_id]);
             if (client.length > 0) {
                 return res.json(client[0]);
             }
             ;
             res.status(404).json({ message: "The client doesn't exist" });
+        });
+    }
+    get_last_id(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const client = yield database_1.default.query('SELECT * FROM clients ORDER BY client_id DESC LIMIT 1;');
+            if (client.length > 0) {
+                return res.json(client[0]);
+            }
+            ;
+            res.status(404).json({ message: "Not and ID" });
         });
     }
     create_client(req, res) {

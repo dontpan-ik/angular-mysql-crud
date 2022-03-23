@@ -12,6 +12,7 @@ import orderRoutes from './routes/orderRoutes';
 import deliveryRoutes from './routes/deliveryRoutes';
 import orderDetailsRoutes from './routes/orderDetailsRoutes';
 import loginRoutes from './routes/loginRoutes';
+import utilRoutes from "./routes/utilRoutes";
 
 class Server{
 
@@ -42,6 +43,7 @@ class Server{
         this.app.use('/api/orders',orderRoutes);
         this.app.use('/api/order_details',orderDetailsRoutes);
         this.app.use('/api/delivery',deliveryRoutes);
+        this.app.use('/api/util',utilRoutes);
     }
 
     start():void{

@@ -14,6 +14,8 @@ export class VentasComponent implements OnInit {
     title: "Ventas",
   }
   ventas: any =[];
+
+  modalSwitch: boolean = false;
   constructor(private ventasService: VentasService) { }
 
   ngOnInit(): void {
@@ -36,6 +38,11 @@ export class VentasComponent implements OnInit {
 
   deleteOrder(id: number){
     console.log(id);
+  }
+
+  productDetails(id: number){
+    console.log(id);
+    this.modalSwitch=true;
   }
 
 }

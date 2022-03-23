@@ -1,1 +1,46 @@
-<p>proveedores-form works!</p>
+<app-header [titleComp]="navbar"></app-header>
+<app-menu></app-menu>
+<div class="card-form">
+  <div class="card-body">
+    <div style="display: flex; justify-content: flex-end; margin-bottom: 10px;">
+      <button class="btn-regresar" (click)="regresar()">regresar</button>
+    </div>
+    <div class="contact-wrapper">
+      <div class="contact-form">
+          <form>
+              <p>
+                  <label>Nombre de la Compañia</label>
+                  <input type="text" [(ngModel)]="proveedor.company_name" name="name" placeholder="nombre">
+              </p>
+              <p>
+                  <label>Categoria</label>
+                  <input type="text" [(ngModel)]="proveedor.category" name="category" placeholder="categoria">
+              </p>
+              <p>
+                  <label>Correo</label>
+                  <input type="email" [(ngModel)]="proveedor.email" name="email" placeholder="correo">
+              </p>
+              <p>
+                  <label>Domicilio</label>
+                  <input type="text" [(ngModel)]="proveedor.address" name="address" placeholder="domicilio">
+              </p>
+              <p>
+                <label>Numero de Contacto</label>
+                <input type="text" [(ngModel)]="proveedor.contact_number" name="contact_number" placeholder="numero de Contacto">
+            </p>
+            <p>
+                <label>Estatus</label>
+                <input type="text" [(ngModel)]="proveedor.status" name="status" placeholder="estatus">
+            </p>
+              <!--<p class="block">
+                  <label>Message</label>
+                  <textarea name="message" rows="3"></textarea>
+              </p >-->
+              <p class="block">
+                  <button  type="submit" (click)="edit ? updateProveedor() : saveNewProveedor()">Guardar</button>
+              </p>
+          </form>
+      </div>
+  </div>
+  </div>
+</div>

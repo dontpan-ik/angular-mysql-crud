@@ -20,6 +20,7 @@ import { VentasService } from './services/ventas.service';
 import { ComprasService } from './services/compras.service';
 import { ProveedoresService } from './services/proveedores.service';
 import { ClientesService } from './services/clientes.service';
+import { UtilService } from './services/util.service';
 
 import { HomeComponent } from './components/home/home.component';
 import { VentasComponent } from './components/ventas/ventas.component';
@@ -48,6 +49,7 @@ import { VentasFormComponent } from './components/forms/ventas-form/ventas-form.
 import { ClienteFormComponent } from './components/forms/cliente-form/cliente-form.component';
 import { ProveedoresFormComponent } from './components/forms/proveedores-form/proveedores-form.component';
 import { ComprasFormComponent } from './components/forms/compras-form/compras-form.component';
+import { OrderDetailsComponent } from './components/common/order-details/order-details.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +73,8 @@ import { ComprasFormComponent } from './components/forms/compras-form/compras-fo
     VentasFormComponent,
     ClienteFormComponent,
     ProveedoresFormComponent,
-    ComprasFormComponent
+    ComprasFormComponent,
+    OrderDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -90,6 +93,7 @@ import { ComprasFormComponent } from './components/forms/compras-form/compras-fo
     ProveedoresService,
     ClientesService,
     ComprasService,
+    UtilService,
     LoginGuardGuard,
     HomeGuard,
     ProductsGuard,

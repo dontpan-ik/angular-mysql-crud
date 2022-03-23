@@ -11,7 +11,10 @@ import { UsersService } from 'src/app/services/users.service';
 
 export class UserFormComponent implements OnInit {
 
-  title : string = "Agrega Usuario";
+  navbar: any = {
+    id: 7,
+    title: "Usuarios",
+  }
 
   user: Users={
     name: "",

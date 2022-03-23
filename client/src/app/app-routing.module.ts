@@ -27,6 +27,7 @@ import { VentasFormComponent } from './components/forms/ventas-form/ventas-form.
 import { ProveedoresFormComponent } from './components/forms/proveedores-form/proveedores-form.component';
 import { ClienteFormComponent } from './components/forms/cliente-form/cliente-form.component';
 import { ComprasFormComponent } from './components/forms/compras-form/compras-form.component';
+import { OrderDetailsComponent } from './components/common/order-details/order-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'  },
@@ -45,8 +46,9 @@ const routes: Routes = [
   { path: 'usuarios/edit/:user_id', component: UserFormComponent},
 
   { path: 'ventas', component: VentasComponent, canActivate: [VentasGuard]},
-  { path: 'ventas/add', component: VentasFormComponent},
-  { path: 'ventas/edit/:order_id', component: VentasFormComponent},
+  { path: 'ventas/add', component: VentasFormComponent,canActivate: [VentasGuard]},
+  { path: 'ventas/edit/:order_id', component: VentasFormComponent,canActivate: [VentasGuard]},
+  { path: 'ventas/order-details/:order_id', component: OrderDetailsComponent,canActivate: [VentasGuard]},
   
   { path: 'estadisticas', component: EstadisticasComponent, canActivate: [EstadisticasGuard]},
 
