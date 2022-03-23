@@ -68,15 +68,16 @@ export class ClienteFormComponent implements OnInit {
       res=>{
         this.utilService.getLast().subscribe(
           res =>{
-            var id = res;
-            console.log(id);
+            var id = Object.values(res);
+            console.log(id[0]);
             var obj ={
               name: this.user.name,
               last_name: this.user.last_name,
               email: this.user.email,
               password: this.user.password,
               rol_id: this.user.rol_id,
-              status: this.user.status
+              status: this.user.status,
+              client_id:id[0]
             }
             this.usersService.saveUser(obj).subscribe(
               res=>{

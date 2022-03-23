@@ -2,7 +2,7 @@
 <app-menu></app-menu>
 <div class="card2">
   <div class="row">
-    <div class="col-3" *ngFor="let product of products">
+    <div class="col-3" *ngFor="let product of products | paginate: { itemsPerPage: 4, currentPage: p }">
       <div class="card text-center ">
         <div class="card-header d-flex justify-content-between align-items-center">
           {{product.name}}
@@ -21,6 +21,9 @@
           </a>
         </div>
       </div>   
+    </div>
+    <div style="margin-top: 2em;">
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
     </div>
   </div>
 </div>
