@@ -12,6 +12,7 @@ class UtilRoutes {
     }
     config() {
         this.router.get('/last', utilController_1.default.get_last_id);
+        this.router.get('/dataset', utilController_1.default.get_dataset);
     }
 }
 const utilRoutes = new UtilRoutes();

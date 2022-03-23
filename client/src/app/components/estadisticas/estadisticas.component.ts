@@ -3,6 +3,7 @@ import { ChartConfiguration, ChartData, ChartEvent, ChartType } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
 import { jsPDF } from "jspdf";
 import { Html2CanvasOptions } from 'jspdf';
+import { UtilService } from 'src/app/services/util.service';
 
 import DataLabelsPlugin from 'chartjs-plugin-datalabels';
 import html2canvas from 'html2canvas';
@@ -16,7 +17,11 @@ export class EstadisticasComponent implements OnInit {
 
   doc = new jsPDF();
 
+  num: any = this.returnNumSet();
+  
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
+  @ViewChild(BaseChartDirective) numeros: BaseChartDirective | undefined;
+
 
 // grafica barras 
 public barChartOptions: ChartConfiguration['options'] = {
@@ -138,15 +143,46 @@ toggleLegend(): void {
     title: "Estadisticas",
   }
   title = "Estadisticas";
-  constructor() { }
+  constructor(private utilService: UtilService) { 
+    
+
+  }
+
+  bandera: boolean = false;
+
+  num_set: any =[];
 
   ngOnInit(): void {
+    
+    this.utilService.getDataSet().subscribe(
+      res =>{
+         this.num_set=res;
+         console.log(this.num_set[0].total);
+      },
+      err =>{
+        console.log(err);
+      }
+    )
+    
+  }
+
+  returnNumSet(){
+    this.utilService.getDataSet().subscribe(
+      res =>{
+        console.log(res);
+        this.num_set=res;
+        return this.num_set[0].total;
+      },
+      err =>{
+        console.log(err);
+      }
+    )
   }
 
   generatePDF(){
     //this.doc.text("Hello world!", 10, 10);
     //this.doc.save("a4.pdf");
-    const DATA: any = document.getElementById('chart');
+    const DATA: any = document.getElementById('row');
     const doc = new jsPDF('p', 'pt', 'a4');
     const options = {
       background: 'white',

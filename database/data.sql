@@ -375,3 +375,7 @@ SELECT * FROM products p JOIN  order_details o ON p.product_id=o.product_id WHER
 SELECT * FROM products p JOIN  order_details o ON p.product_id=o.product_id WHERE order_id = ?
 
 SELECT * FROM orders o JOIN order_details od ON o.order_id=od.order_id JOIN products p ON od.product_id = p.product_id WHERE o.order_id = 1
+
+SELECT COUNT(*) AS total
+FROM products AS total     
+GROUP BY category_id;

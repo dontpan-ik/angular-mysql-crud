@@ -15,4 +15,8 @@ export class UtilService {
   getLast(){
     return this.http.get(`${this.API_URI}/util/last`);
   }
+
+  getDataSet(){
+    return this.http.get(`${this.API_URI}/util/dataset`);
+  }
 }

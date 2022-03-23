@@ -22,7 +22,7 @@ class LoginController {
         return __awaiter(this, void 0, void 0, function* () {
             const user = req.body.email;
             const pass = req.body.password;
-            const product = yield database_1.default.query('SELECT user_id,name,last_name,email,rol_id FROM users WHERE email = ? AND password = ? ', [user, pass]);
+            const product = yield database_1.default.query("SELECT user_id,name,last_name,email,rol_id FROM users WHERE status='ACTIVO' AND email = ? AND password = ? ", [user, pass]);
             if (product.length > 0) {
                 const token = jwt.sign({ name: user }, process.env.ACCESS_TOKEN_SECRET);
                 return res.json({

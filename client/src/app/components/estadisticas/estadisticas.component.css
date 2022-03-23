@@ -14,3 +14,14 @@
     align-items: flex-end;
     justify-content: flex-end;
   }
+
+  .btn-down{
+    color: white;
+    background-color: #876BAD;
+    border-color: #a9a0b6;
+    border-radius: 1ch;
+    font-size: large;
+    font-weight: bolder;
+    height: 60%;
+    width: 50%;
+  }

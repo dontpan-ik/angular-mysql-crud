@@ -11,6 +11,7 @@ class UtilRoutes{
 
     config():void{
         this.router.get('/last', utilController.get_last_id);
+        this.router.get('/dataset',utilController.get_dataset);
     }
 }
 

@@ -2,7 +2,7 @@
 <app-menu></app-menu>
 
 <div class="card2">
-    <div class="row">
+    <div class="row" id="row">
         <div class="col-6">
             <div style="display: block">
                 <canvas baseChart
@@ -51,34 +51,16 @@
                         <option class="mt-2" value="Cancelado">Cancelados</option>
                         <option class="mt-2" value="Pendiente">Pendientes</option>
                     </select>
-                </div>
-                <button (click)="generatePDF()">Descargar</button>
-            </div>
-            
-            <!--<div class="col-sm-12 col-md-4" *ngIf="isCheck else esFake">
-                <div class="row">
-                    <div class="col-md-4">
-                        <button class="btn btn-secondary btn-sm ml-3" (click)="changeStatus()">Cancelar</button>
-                    </div>
-                    <div class="col-md-8">
-                        <input type="date" name="fecha" id="" class="form-control" [(ngModel)]="byDate" (change)="actualizar()">
-                    </div>
+                    <button class="btn-down" (click)="generatePDF()">Descargar</button>
                 </div>
             </div>
-            <ng-template #esFake>
-                <div class="col-sm-12 col-md-4">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <button class="btn btn-info btn-sm ml-3" (click)="changeStatus()">por Fecha</button>
-                        </div>
-                        <div class="col-md-8">
-                            <input type="date" name="fecha" id="data" class="form-control" disabled>
-                        </div>
-                    </div>
-                </div>
-            </ng-template>-->
-        </div>
         <hr class="mt-1">
+        <div *ngIf="bandera==true" id="hidbox">
+            {{num_set[0].total}}
+            {{num_set[1].total}}
+            {{num_set[2].total}}
+            {{num_set[3].total}}
+        </div>
     </div>
     
 </div>

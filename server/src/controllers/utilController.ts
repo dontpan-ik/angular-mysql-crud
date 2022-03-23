@@ -12,6 +12,14 @@ class UtilController{
         res.status(404).json({message:"Not and ID"});
     }
 
+    public async get_dataset (req: Request, res: Response){
+        const client = await pool.query('SELECT COUNT(*) AS total FROM products GROUP BY category_id;');
+        if(client.length > 0){
+            return res.json(client);
+        };
+        res.status(404).json({message:"Not and ID"});
+    }
+
 }
 
 const utilController = new UtilController();

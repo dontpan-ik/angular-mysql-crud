@@ -24,6 +24,16 @@ class UtilController {
             res.status(404).json({ message: "Not and ID" });
         });
     }
+    get_dataset(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const client = yield database_1.default.query('SELECT COUNT(*) AS total FROM products GROUP BY category_id;');
+            if (client.length > 0) {
+                return res.json(client);
+            }
+            ;
+            res.status(404).json({ message: "Not and ID" });
+        });
+    }
 }
 const utilController = new UtilController();
 exports.default = utilController;
