@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "bootstrap-icons": "^1.8.1",
-    "feather-icons": "^4.28.0"
+    "feather-icons": "^4.28.0",
+    "ngx-pagination": "^5.1.1"
   },
   "devDependencies": {
     "@types/feather-icons": "^4.7.0"

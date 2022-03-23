@@ -7,3 +7,14 @@
     padding: 5%;
     border-radius: 15px;
 }
+
+.btn-danger{
+
+    background-color: #a45e5e;
+    border-color: #a45e5e;
+}
+
+.btn-warning{
+    background-color: #dbe76b;
+    border-color: #dbe76b;
+}
