@@ -293,3 +293,5 @@ INSERT INTO supliers(company_name, category,email,address,contact_number,status)
 SELECT * FROM orders o JOIN order_details d on o.order_id = d. order_id WHERE o.order_id = 1;
 
 SELECT * FROM users u JOIN clients c on u.client_id=c.client_id WHERE u.client_id = 1;
+
+SELECT * FROM clients ORDER BY client_id DESC LIMIT 1;

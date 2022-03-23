@@ -18,6 +18,7 @@ import { VentasService } from './services/ventas.service';
 import { ComprasService } from './services/compras.service';
 import { ProveedoresService } from './services/proveedores.service';
 import { ClientesService } from './services/clientes.service';
+import { UtilService } from './services/util.service';
 
 import { HomeComponent } from './components/home/home.component';
 import { VentasComponent } from './components/ventas/ventas.component';
@@ -87,6 +88,7 @@ import { ComprasFormComponent } from './components/forms/compras-form/compras-fo
     ProveedoresService,
     ClientesService,
     ComprasService,
+    UtilService,
     LoginGuardGuard,
     HomeGuard,
     ProductsGuard,

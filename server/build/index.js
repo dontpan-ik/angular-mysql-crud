@@ -16,6 +16,7 @@ const orderRoutes_1 = __importDefault(require("./routes/orderRoutes"));
 const deliveryRoutes_1 = __importDefault(require("./routes/deliveryRoutes"));
 const orderDetailsRoutes_1 = __importDefault(require("./routes/orderDetailsRoutes"));
 const loginRoutes_1 = __importDefault(require("./routes/loginRoutes"));
+const utilRoutes_1 = __importDefault(require("./routes/utilRoutes"));
 class Server {
     constructor() {
         this.app = (0, express_1.default)();
@@ -40,6 +41,7 @@ class Server {
         this.app.use('/api/orders', orderRoutes_1.default);
         this.app.use('/api/order_details', orderDetailsRoutes_1.default);
         this.app.use('/api/delivery', deliveryRoutes_1.default);
+        this.app.use('/api/util', utilRoutes_1.default);
     }
     start() {
         this.app.listen(this.app.get('port'), () => {

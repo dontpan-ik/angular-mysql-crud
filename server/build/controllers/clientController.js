@@ -31,6 +31,16 @@ class ClientController {
             res.status(404).json({ message: "The client doesn't exist" });
         });
     }
+    get_last_id(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const client = yield database_1.default.query('SELECT * FROM clients ORDER BY client_id DESC LIMIT 1;');
+            if (client.length > 0) {
+                return res.json(client[0]);
+            }
+            ;
+            res.status(404).json({ message: "Not and ID" });
+        });
+    }
     create_client(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             yield database_1.default.query('INSERT INTO clients SET ?', [req.body]);
