@@ -8,5 +8,5 @@ export interface Product{
     suplier_price?: number;
     stock?: number;
     status?:string;
-    image_url?: "NOT JET";
+    image_url?: string;
 }

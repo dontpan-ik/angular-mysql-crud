@@ -21,7 +21,7 @@ export class ProductFormComponent implements OnInit {
     suplier_price: 0,
     stock: 0,
     status: '',
-    image_url: 'NOT JET'
+    image_url: '../../../assets/images/Productos/050 EXFOLIANTE DURAZNO 400.JPG'
   }
 
   edit :boolean = false;
