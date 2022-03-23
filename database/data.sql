@@ -250,7 +250,7 @@ INSERT INTO users(name,last_name,email,password,rol_id,status)VALUES(
 
 
 
-/*VENTAS*/
+/*CLIENTES*/
 
 INSERT INTO clients(address, phone_number, birth_date) VALUES(
     'Av. Jaime Pinto #3355 Col Atlas',
@@ -268,14 +268,13 @@ INSERT INTO users(name,last_name,email,password,rol_id,status,client_id)VALUES(
     1
 );
 
+/*VENTAS*/
 INSERT INTO orders(client_id, total_items, total_charge, status) VALUES(
     1,
     2,
     139.99,
     'ACTIVE'
 );
-
-SELECT * FROM orders;
 
 INSERT INTO order_details(order_id, product_id,amount,charge) VALUES(
     1,
@@ -291,6 +290,69 @@ INSERT INTO order_details(order_id, product_id,amount,charge) VALUES(
     94.99
 );
 
+/**/
+
+INSERT INTO orders(client_id, total_items, total_charge, status) VALUES(
+    3,
+    3,
+    175.48,
+    'ACTIVE'
+);
+
+
+
+INSERT INTO order_details(order_id, product_id,amount,charge) VALUES(
+    2,
+    1,
+    1,
+    84.99
+);
+
+INSERT INTO order_details(order_id, product_id,amount,charge) VALUES(
+    2,
+    6,
+    1,
+    64.99
+);
+
+INSERT INTO order_details(order_id, product_id,amount,charge) VALUES(
+    2,
+    10,
+    1,
+    25.5
+);
+
+/**/
+INSERT INTO orders(client_id, total_items, total_charge, status) VALUES(
+    1,
+    4,
+    175.48,
+    'ACTIVE'
+);
+
+INSERT INTO order_details(order_id, product_id,amount,charge) VALUES(
+    3,
+    11,
+    2,
+    51
+);
+
+INSERT INTO order_details(order_id, product_id,amount,charge) VALUES(
+    3,
+    9,
+    1,
+    52.5
+);
+
+INSERT INTO order_details(order_id, product_id,amount,charge) VALUES(
+    3,
+    14,
+    1,
+    490
+);
+
+
+/*SUPLIER*/
 INSERT INTO supliers(company_name, category,email,address,contact_number,status) VALUES(
     'Ali Sales',
     'Importador',

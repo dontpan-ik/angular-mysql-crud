@@ -10,32 +10,36 @@
           <form>
               <p>
                   <label>Nombre</label>
-                  <input type="text" [(ngModel)]="user.name" name="name" placeholder="nombre">
+                  <input type="text" [(ngModel)]="user.name"class="form-control" name="name" placeholder="nombre">
               </p>
               <p>
                   <label>Apellido</label>
-                  <input type="text" [(ngModel)]="user.last_name" name="last_name" placeholder="apellido">
+                  <input type="text" [(ngModel)]="user.last_name"class="form-control" name="last_name" placeholder="apellido">
               </p>
               <p>
                   <label>Correo</label>
-                  <input type="email" [(ngModel)]="user.email" name="email" placeholder="correo">
+                  <input type="email" [(ngModel)]="user.email" class="form-control"name="email" placeholder="correo">
               </p>
               <p>
                   <label>Contraseña</label>
-                  <input type="password" [(ngModel)]="user.password" name="password" placeholder="Contraseña">
+                  <input type="password"class="form-control" [(ngModel)]="user.password" name="password" placeholder="Contraseña">
               </p>
               <p>
                 <label>Rol</label>
-                <input type="text" [(ngModel)]="user.rol_id" name="rol_id">
+                <select name="status" class="form-control" [(ngModel)]="user.rol_id">
+                    <option value=1>ADMINISTRADOR</option>
+                    <option value=2>EDITOR</option>
+                    <option value=3>CONSULTOR</option>
+              </select>
             </p>
             <p>
                 <label>Estatus</label>
-                <input type="text" [(ngModel)]="user.status" name="status">
+                <select name="status" class="form-control" [(ngModel)]="user.status">
+                      <option value="ACTIVO">ACTIVO</option>
+                      <option value="BLOQUEADO">BLOQUEADO</option>
+                      <option value="PENDIENTE">PENDIENTE</option>
+                </select>
             </p>
-              <!--<p class="block">
-                  <label>Message</label>
-                  <textarea name="message" rows="3"></textarea>
-              </p >-->
               <p class="block">
                   <button  type="submit" (click)="edit ? updateUser() : saveNewUser()">Guardar</button>
               </p>

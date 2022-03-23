@@ -26,8 +26,9 @@
           <th scope="col">Correo</th>
           <th scope="col">Contraseña</th>
           <th scope="col">Rol</th>
-          <th scope="col">Estatus</th>
           <th scope="col">Acciones</th>
+          <th scope="col">Estatus</th>
+          
         </tr>
       </thead>
       <tbody>
@@ -38,7 +39,6 @@
           <td>{{user.email}}</td>
           <td>{{user.password}}</td>
           <td>{{user.rol_id}}</td>
-          <td>{{user.status}}</td>
           <td>
             <div class="accions">
               <button type="button" class="btn-edit" [routerLink]="['/usuarios/edit', user.user_id]"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
@@ -50,6 +50,18 @@
               </svg></button>
             </div>
           </td>
+          <td *ngIf="user.status == 'PENDIENTE' || user.status == 'BLOQUEADO' ; then redRow; else noRed">  </td>
+          <ng-template #redRow>
+            <div style="background-color: rgba(245, 43, 53, 0.137);">
+              {{user.status}}
+            </div>
+          </ng-template>
+          <ng-template #noRed>
+            <div style="background-color: rgba(54, 165, 20, 0.137);">
+              {{user.status}}
+            </div>
+          </ng-template>
+          
         </tr>
       </tbody>
       

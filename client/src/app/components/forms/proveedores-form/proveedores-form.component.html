@@ -10,32 +10,28 @@
           <form>
               <p>
                   <label>Nombre de la Compañia</label>
-                  <input type="text" [(ngModel)]="proveedor.company_name" name="name" placeholder="nombre">
+                  <input type="text" class="form-control"[(ngModel)]="proveedor.company_name" name="name" placeholder="nombre">
               </p>
               <p>
                   <label>Categoria</label>
-                  <input type="text" [(ngModel)]="proveedor.category" name="category" placeholder="categoria">
+                  <input type="text" class="form-control"[(ngModel)]="proveedor.category" name="category" placeholder="categoria">
               </p>
               <p>
                   <label>Correo</label>
-                  <input type="email" [(ngModel)]="proveedor.email" name="email" placeholder="correo">
+                  <input type="email" class="form-control"[(ngModel)]="proveedor.email" name="email" placeholder="correo">
               </p>
               <p>
                   <label>Domicilio</label>
-                  <input type="text" [(ngModel)]="proveedor.address" name="address" placeholder="domicilio">
+                  <input type="text" class="form-control"[(ngModel)]="proveedor.address" name="address" placeholder="domicilio">
               </p>
               <p>
                 <label>Numero de Contacto</label>
-                <input type="text" [(ngModel)]="proveedor.contact_number" name="contact_number" placeholder="numero de Contacto">
+                <input type="text" class="form-control"[(ngModel)]="proveedor.contact_number" name="contact_number" placeholder="numero de Contacto">
             </p>
             <p>
                 <label>Estatus</label>
-                <input type="text" [(ngModel)]="proveedor.status" name="status" placeholder="estatus">
+                <input type="text" class="form-control"[(ngModel)]="proveedor.status" name="status" placeholder="estatus">
             </p>
-              <!--<p class="block">
-                  <label>Message</label>
-                  <textarea name="message" rows="3"></textarea>
-              </p >-->
               <p class="block">
                   <button  type="submit" (click)="edit ? updateProveedor() : saveNewProveedor()">Guardar</button>
               </p>

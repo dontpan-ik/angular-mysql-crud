@@ -78,4 +78,7 @@ export class ProductFormComponent implements OnInit {
     )
   }
 
+  regresar(){
+    this.router.navigate(['/products']);
+  }
 }

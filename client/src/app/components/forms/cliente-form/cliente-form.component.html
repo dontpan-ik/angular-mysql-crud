@@ -10,43 +10,43 @@
         <form>
           <p>
               <label>Nombre</label>
-              <input type="text" [(ngModel)]="user.name" name="name" placeholder="nombre">
+              <input type="text" class="form-control" [(ngModel)]="user.name" name="name" placeholder="nombre">
           </p>
           <p>
               <label>Apellido</label>
-              <input type="text" [(ngModel)]="user.last_name" name="last_name" placeholder="apellido">
+              <input type="text" class="form-control" [(ngModel)]="user.last_name" name="last_name" placeholder="apellido">
           </p>
           <p>
               <label>Correo</label>
-              <input type="email" [(ngModel)]="user.email" name="email" placeholder="correo">
+              <input type="email" class="form-control" [(ngModel)]="user.email" name="email" placeholder="correo">
           </p>
           <p>
               <label>Contraseña</label>
-              <input type="password" [(ngModel)]="user.password" name="password" placeholder="contraseña">
+              <input type="password" class="form-control" [(ngModel)]="user.password" name="password" placeholder="contraseña">
           </p>
           <p>
             <label>Rol</label>
-            <input type="text" [(ngModel)]="user.rol_id" name="rol_id" placeholder="rol">
+            <input type="text" class="form-control" [(ngModel)]="user.rol_id" name="rol_id" placeholder="rol">
         </p>
         <p>
             <label>Estatus</label>
-            <input type="text" [(ngModel)]="user.status" name="status" placeholder="estatus">
+            <input type="text" class="form-control" [(ngModel)]="user.status" name="status" placeholder="estatus">
         </p>
         <p>
           <label>ID cliente</label>
-          <input type="text" [(ngModel)]="cliente.client_id" name="client_id" placeholder="ID cliente" disabled>
+          <input type="text" class="form-control" [(ngModel)]="cliente.client_id" name="client_id" placeholder="ID cliente" disabledclass="form-control" >
       </p>
       <p>
           <label>Domicilio</label>
-          <input type="text" [(ngModel)]="cliente.address" name="address" placeholder="domicilio">
+          <input type="text" class="form-control" [(ngModel)]="cliente.address" name="address" placeholder="domicilio">
       </p>
       <p>
         <label>Numeor telefonico</label>
-        <input type="text" [(ngModel)]="cliente.phone_number" name="phone_number" placeholder="Numero Telefonico">
+        <input type="text" class="form-control" [(ngModel)]="cliente.phone_number" name="phone_number" placeholder="Numero Telefonico">
     </p>
     <p>
         <label>Fecha de nacimiento</label>
-        <input type="text" [(ngModel)]="cliente.birth_date" name="birth_date" placeholder="Fecha de nacimeiento">
+        <input type="text" class="form-control" [(ngModel)]="cliente.birth_date" name="birth_date" placeholder="Fecha de nacimeiento">
     </p>
           <p class="block">
               <button  type="submit" (click)="edit ? updateCliente() : saveNewCliente()">Guardar</button>

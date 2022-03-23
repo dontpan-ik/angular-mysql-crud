@@ -21,7 +21,7 @@ export class UsuariosComponent implements OnInit {
     email: "",
     password: "",
     rol_id:0,
-    status: "ACTIVE"
+    status: ""
   }
   users: any =[];
   constructor(private router: Router, private usersService: UsersService) { }
