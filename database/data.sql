@@ -58,7 +58,7 @@ INSERT INTO products(name,brand,category_id,description,public_price,suplier_pri
     88.00,
     22,
     'ACTIVE',
-    '../../../assets/images/Productos/055 TINTA INDELEBLE COTTONETE.JPEG'
+    '../../../assets/images/Productos/055 TINTA INDELEBLE COTTONETE.jpeg'
 );
 
 INSERT INTO products(name,brand,category_id,description,public_price,suplier_price,stock,status,image_url)VALUES(
@@ -166,7 +166,7 @@ INSERT INTO products(name,brand,category_id,description,public_price,suplier_pri
     460,
     15,
     'ACTIVE',
-    '../../../assets/images/Productos/082 ESPUMA FACIAL LECHE ELENCE.JPEG'
+    '../../../assets/images/Productos/082 ESPUMA FACIAL LECHE ELENCE.jpeg'
 );
 
 INSERT INTO products(name,brand,category_id,description,public_price,suplier_price,stock,status,image_url)VALUES(
@@ -178,7 +178,7 @@ INSERT INTO products(name,brand,category_id,description,public_price,suplier_pri
     459,
     25,
     'ACTIVE',
-    '../../../assets/images/Productos/061 BALSAMO FRESA ULTRAMO.JPEG'
+    '../../../assets/images/Productos/061 BALSAMO FRESA ULTRAMO.jpeg'
 );
 
 INSERT INTO products(name,brand,category_id,description,public_price,suplier_price,stock,status,image_url)VALUES(
@@ -248,12 +248,24 @@ INSERT INTO users(name,last_name,email,password,rol_id,status)VALUES(
     'ACTIVE'
 );
 
+
+
 /*VENTAS*/
 
 INSERT INTO clients(address, phone_number, birth_date) VALUES(
     'Av. Jaime Pinto #3355 Col Atlas',
     '33-22-44-55-66',
     '1989-06-22'
+);
+
+INSERT INTO users(name,last_name,email,password,rol_id,status,client_id)VALUES(
+    'Karen',
+    'Sanchez',
+    'fs_karen@gmail.com',
+    'karen123',
+    3,  
+    'ACTIVE',
+    1
 );
 
 INSERT INTO orders(client_id, total_items, total_charge, status) VALUES(
@@ -295,3 +307,5 @@ SELECT * FROM orders o JOIN order_details d on o.order_id = d. order_id WHERE o.
 SELECT * FROM users u JOIN clients c on u.client_id=c.client_id WHERE u.client_id = 1;
 
 SELECT * FROM clients ORDER BY client_id DESC LIMIT 1;
+
+SELECT * FROM products p JOIN  order_details o ON p.product_id=o.product_id WHERE order_id = 1;

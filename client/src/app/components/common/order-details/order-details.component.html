@@ -7,35 +7,33 @@
     </div>
     <div class="contact-wrapper">
       <div class="contact-form">
-          <!--<form>
-              <p>
-                  <label>Nombre</label>
-                  <input type="text" [(ngModel)]="user.name" name="name" placeholder="nombre">
-              </p>
-              <p>
-                  <label>Apellido</label>
-                  <input type="text" [(ngModel)]="user.last_name" name="last_name" placeholder="apellido">
-              </p>
-              <p>
-                  <label>Correo</label>
-                  <input type="email" [(ngModel)]="user.email" name="email" placeholder="correo">
-              </p>
-              <p>
-                  <label>Contraseña</label>
-                  <input type="password" [(ngModel)]="user.password" name="password" placeholder="Contraseña">
-              </p>
-              <p>
-                <label>Rol</label>
-                <input type="text" [(ngModel)]="user.rol_id" name="rol_id">
-            </p>
-            <p>
-                <label>Estatus</label>
-                <input type="text" [(ngModel)]="user.status" name="status">
-            </p>
-              <p class="block">
-                  <button  type="submit" (click)="edit ? updateVenta() : saveNewVenta()">Guardar</button>
-              </p>
-          </form> -->
+          <table class="table table-striped">
+            <thead>
+                <tr>
+                  <th scope="col">order_id</th>
+                  <th scope="col">product_id</th>
+                  <th scope="col">name</th>
+                  <th scope="col">brand</th>
+                  <th scope="col">category_id</th>
+                  <th scope="col">description </th>
+                  <th scope="col">amount</th>
+                  <th scope="col">charge</th>
+                  <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let order of order_details">
+                  <th scope="row">{{order.order_id}}</th>
+                  <td>{{order.product_id}}</td>
+                  <td>{{order.name}}</td>
+                  <td>{{order.brand}}</td>
+                  <td>{{order.category_id}}</td>
+                  <td>{{order.description}}</td>
+                  <td>{{order.amount}}</td>
+                  <td>{{order.charge}}</td>
+                </tr>
+              </tbody>
+          </table>
       </div>
   </div>
   </div>

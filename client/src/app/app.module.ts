@@ -21,6 +21,7 @@ import { ComprasService } from './services/compras.service';
 import { ProveedoresService } from './services/proveedores.service';
 import { ClientesService } from './services/clientes.service';
 import { UtilService } from './services/util.service';
+import { OrderDetailsService } from './services/order-details.service';
 
 import { HomeComponent } from './components/home/home.component';
 import { VentasComponent } from './components/ventas/ventas.component';
@@ -93,6 +94,7 @@ import { OrderDetailsComponent } from './components/common/order-details/order-d
     ProveedoresService,
     ClientesService,
     ComprasService,
+    OrderDetailsService,
     UtilService,
     LoginGuardGuard,
     HomeGuard,
