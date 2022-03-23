@@ -90,3 +90,19 @@
       margin-top: 1em;
       margin-bottom: 1em;
   }
+
+  .download-b{
+    color: white;
+      background-color: #876BAD;
+      border-color: #a9a0b6;
+      border-radius: 1ch;
+      font-size: large;
+      font-weight: bolder;
+      width: 10%;
+      margin-top: 1em;
+      margin-bottom: 1em;
+  }
+
+  .title-p{
+    text-align: center;
+  }

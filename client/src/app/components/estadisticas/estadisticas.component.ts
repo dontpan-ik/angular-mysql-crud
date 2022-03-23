@@ -1,8 +1,11 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ChartConfiguration, ChartData, ChartEvent, ChartType } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
+import { jsPDF } from "jspdf";
+import { Html2CanvasOptions } from 'jspdf';
 
 import DataLabelsPlugin from 'chartjs-plugin-datalabels';
+import html2canvas from 'html2canvas';
 
 @Component({
   selector: 'app-estadisticas',
@@ -10,6 +13,9 @@ import DataLabelsPlugin from 'chartjs-plugin-datalabels';
   styleUrls: ['./estadisticas.component.css']
 })
 export class EstadisticasComponent implements OnInit {
+
+  doc = new jsPDF();
+
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
 
 // grafica barras 
@@ -138,4 +144,40 @@ toggleLegend(): void {
   ngOnInit(): void {
   }
 
+  generatePDF(){
+    //this.doc.text("Hello world!", 10, 10);
+    //this.doc.save("a4.pdf");
+    const DATA: any = document.getElementById('chart');
+    const doc = new jsPDF('p', 'pt', 'a4');
+    const options = {
+      background: 'white',
+      scale: 3,
+    };
+    html2canvas(DATA, options).then(
+      (canvas) =>{
+        const img = canvas.toDataURL ('image/PNG');
+        const bufferX = 15;
+        const bufferY = 15; 
+        const imgProps = (doc as any).getImageProperties(img);
+        const pdfWidth = doc.internal.pageSize.getWidth() - 2 * bufferX; 
+        const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+        doc.addImage(
+          img,
+          'PNG',
+          bufferX,
+          bufferY,
+          pdfWidth,
+          pdfHeight,
+          undefined,
+          'FAST'
+        );
+        return doc;
+      }
+    )
+    .then((docResult)=>{
+      docResult.save(`${new Date().toISOString}_reporte.pdf`);
+
+    })
+
+  }
 }

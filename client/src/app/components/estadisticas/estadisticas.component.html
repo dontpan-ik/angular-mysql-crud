@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="col-6">
-            <div class="chart">
+            <div class="chart" id="chart">
                 <canvas baseChart style="max-height: 300px;"
                         [data]="pieChartData"
                         [type]="pieChartType"
@@ -26,4 +26,59 @@
               </div>
         </div>
     </div>
+</div>
+
+<div class="card2">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div class="report-view">
+                    <p class="font-weight-light h4">
+                        <svg width="2.3em" height="2.3em" viewBox="0 0 16 16" class="bi bi-file-earmark-text" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 1h5v1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V6h1v7a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2z"/>
+                            <path d="M9 4.5V1l5 5h-3.5A1.5 1.5 0 0 1 9 4.5z"/>
+                            <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
+                          </svg> Reportes
+                    </p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="report-view">
+                    <select type="text" name="buscador" class="form-control buscador mb-2">
+                        <option class="mt-2" value="Todos">---Tipo de Pedido---</option>
+                        <option class="mt-2" value="Todos">Todos</option>
+                        <option class="mt-2" value="Completado">Completados</option>
+                        <option class="mt-2" value="Cancelado">Cancelados</option>
+                        <option class="mt-2" value="Pendiente">Pendientes</option>
+                    </select>
+                </div>
+                <button (click)="generatePDF()">Descargar</button>
+            </div>
+            
+            <!--<div class="col-sm-12 col-md-4" *ngIf="isCheck else esFake">
+                <div class="row">
+                    <div class="col-md-4">
+                        <button class="btn btn-secondary btn-sm ml-3" (click)="changeStatus()">Cancelar</button>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="date" name="fecha" id="" class="form-control" [(ngModel)]="byDate" (change)="actualizar()">
+                    </div>
+                </div>
+            </div>
+            <ng-template #esFake>
+                <div class="col-sm-12 col-md-4">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <button class="btn btn-info btn-sm ml-3" (click)="changeStatus()">por Fecha</button>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="date" name="fecha" id="data" class="form-control" disabled>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>-->
+        </div>
+        <hr class="mt-1">
+    </div>
+    
 </div>

@@ -28,7 +28,7 @@
           <th scope="col">Acciones</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody id="ventas-table">
         <tr *ngFor="let venta of ventas">
           <th scope="row">{{venta.order_id}}</th>
           <td>{{venta.client_id}}</td>

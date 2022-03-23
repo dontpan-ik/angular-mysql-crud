@@ -20,6 +20,8 @@
     "@angular/router": "~13.2.0",
     "chart.js": "^3.7.1",
     "chartjs-plugin-datalabels": "^2.0.0",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1",
     "jwt-decode": "^3.1.2",
     "ng2-charts": "^3.0.8",
     "ngx-pagination": "^5.1.1",

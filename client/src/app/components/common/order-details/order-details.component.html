@@ -5,8 +5,12 @@
     <div style="display: flex; justify-content: flex-end; margin-bottom: 10px;">
       <button class="btn-regresar" (click)="regresar()">regresar</button>
     </div>
+    
     <div class="contact-wrapper">
-      <div class="contact-form">
+      <div class="contact-form" id="user_report">
+        
+        <h3><p class="title-p">Reporte de Usuario</p></h3>
+        <hr>
           <table class="table table-striped">
             <thead>
                 <tr>
@@ -18,7 +22,6 @@
                   <th scope="col">description </th>
                   <th scope="col">amount</th>
                   <th scope="col">charge</th>
-                  <th scope="col">Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -32,8 +35,22 @@
                   <td>{{order.amount}}</td>
                   <td>{{order.charge}}</td>
                 </tr>
+                <tr>
+                  <td> </td>
+                  <td> </td>
+                  <td> </td>
+                  <td> </td>
+                  <td> </td>
+                  <td> </td>
+                    <th>TOTAL</th>
+                    <td>{{order_details[0].total_charge}}</td>
+
+                </tr>
               </tbody>
           </table>
+      </div>
+      <div>
+        <button (click)="generatePDF()" class="download-b" >Descargar</button>
       </div>
   </div>
   </div>

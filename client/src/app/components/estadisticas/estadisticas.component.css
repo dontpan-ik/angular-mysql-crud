@@ -7,3 +7,10 @@
     padding: 5%;
     border-radius: 10px;
   }
+
+
+  .report-view{
+    display: block;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }

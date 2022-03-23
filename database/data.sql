@@ -326,7 +326,7 @@ INSERT INTO order_details(order_id, product_id,amount,charge) VALUES(
 INSERT INTO orders(client_id, total_items, total_charge, status) VALUES(
     1,
     4,
-    175.48,
+    593.50,
     'ACTIVE'
 );
 
@@ -371,3 +371,7 @@ SELECT * FROM users u JOIN clients c on u.client_id=c.client_id WHERE u.client_i
 SELECT * FROM clients ORDER BY client_id DESC LIMIT 1;
 
 SELECT * FROM products p JOIN  order_details o ON p.product_id=o.product_id WHERE order_id = 1;
+
+SELECT * FROM products p JOIN  order_details o ON p.product_id=o.product_id WHERE order_id = ?
+
+SELECT * FROM orders o JOIN order_details od ON o.order_id=od.order_id JOIN products p ON od.product_id = p.product_id WHERE o.order_id = 1

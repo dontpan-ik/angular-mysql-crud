@@ -17,7 +17,7 @@ class OrderDetailsController {
     get_order_details(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { order_id } = req.params;
-            const order = yield database_1.default.query('SELECT * FROM products p JOIN  order_details o ON p.product_id=o.product_id WHERE order_id = ?', [order_id]);
+            const order = yield database_1.default.query('SELECT * FROM orders o JOIN order_details od ON o.order_id=od.order_id JOIN products p ON od.product_id = p.product_id WHERE o.order_id = ?', [order_id]);
             if (order.length > 0) {
                 return res.json(order);
             }
